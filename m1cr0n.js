@@ -1,7 +1,6 @@
 /** 
- * @file m1cr0n.js is a tiny group of standalone helper functions in one line
- * for specific tasks. Useful for code injection, bookmarklets, debugging, etc.
- * @version 1.0.12
+ * @file m1cr0n.js - Group of standalone helper functions in 1 line.
+ * @version 1.0.13
  * @author Lucas M. Ciruzzi <lucasmciruzzi@live.com>
  */
 
@@ -79,4 +78,4 @@ function remove(E){if(E instanceof Array){E.forEach(function(e){remove(e)})}else
  * @example var getXhr = setXhr("http://someurl.com"), // getXhr now has a XMLHttpRequest opened in GET mode for http://someurl.com
  *     postXhr = setXhr("http://someurl.com", "POST"); // Same as before, but in POST mode
  */
-function setXhr(u,m){var x=new XMLHttpRequest();x.open(m||"GET",u,!0);x.setRequestHeader("Content-type","application/x-www-form-urlencoded");return x}
+function setXhr(u,m){var x=new XMLHttpRequest();x.open(m||"GET",u,!0);x.setRequestHeader("Content-type","application/x-www-form-urlencoded;charset=UTF-8");return x}
