@@ -1,7 +1,7 @@
 m1cr0n
 ======
 
-Tiny group of standalone helper functions in one line for specific tasks. Useful for code injection, bookmarklets, debugging, etc.
+Standalone helper functions in 1 line. Useful for code injection, bookmarklets, debugging, etc.
 
 ```
 cssSet - Set several styles of an element or a group of elements.
