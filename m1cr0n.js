@@ -1,8 +1,10 @@
 /** 
  * @file m1cr0n.js - Standalone helper functions in 1 line.
- * @version 1.0.13
+ * @version 1.0.17
  * @author Lucas M. Ciruzzi <lucasmciruzzi@live.com>
  */
+
+/*jshint asi: true, forin: false */
 
 /**
  * Change several styles of a DOM Element or a group of DOM Elements
@@ -18,7 +20,7 @@
  *     color: "#F00"
  * });
  */
-function cssSet(E,S){if(E instanceof Array){E.forEach(function(e){cssSet(e,S)})}else{for(var s in S){E.style[s]=S[s]}}return E}
+function cssSet(E,S){if(E instanceof Array)E.forEach(function(e){cssSet(e,S)});else for(var s in S) E.style[s]=S[s];return E}
 
 /**
  * addEventListener Alias
@@ -46,7 +48,7 @@ function listen(E,v,c){if(E instanceof Array){E.forEach(function(e){listen(e,v,c
  *     dismiss: "goodbye"
  * }); // This will return "greet=hello&dismiss=goodbye"
  */
-function objUrl(o){var u="",p;for(p in o){if(o.hasOwnProperty(p)){u+=((u.length>1)?"&":"")+p+"="+encodeURIComponent(o[p])}}return u}
+function objUrl(o){var u="",p;for(p in o)u+=((!u.length)?u:"&")+p+"="+encodeURIComponent(o[p]);return u}
 
 /**
  * Query select elements and parse the nodeList into an array
@@ -67,7 +69,7 @@ function qryGet(q,e){var n=(e||document).querySelectorAll(q),a=[],i=n.length;for
  * @example remove(document.body.firstChild); // This will return the first element (after remove it from the DOM)
  * remove(qryGet("div.remove")); // This will return an array of divs with remove class (after remove them from the DOM)
  */
-function remove(E){if(E instanceof Array){E.forEach(function(e){remove(e)})}else{E.parentElement.removeChild(E)}return E}
+function remove(E){if(E instanceof Array)E.forEach(function(e){remove(e)});else E.parentElement.removeChild(E);return E}
 
 /**
  * Cretes a XML HTTP Request Element (with ajax header)
