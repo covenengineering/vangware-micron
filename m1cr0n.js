@@ -72,7 +72,7 @@ function get(q,e){var n=(e||document).querySelectorAll(q),a=[],i=n.length;for(;i
 function del(E){if(E instanceof Array)E.forEach(function(e){del(e)});else E.parentElement.removeChild(E);return E}
 
 /**
- * Alias for new XMLHttpRequest().open() with ajax header and GET method by default.
+ * Alias for new XMLHttpRequest, with ajax header and GET method by default.
  *
  * @param {string} u - URL.
  * @param {string} [m=GET] - Method.

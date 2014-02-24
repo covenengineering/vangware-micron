@@ -9,5 +9,5 @@ ael - Listen to an event on an element or a group of elements.
 url - Parse an object into URL format for XHR.
 get - Alias for querySelectorAll, but returning an array instead of a nodeList.
 del - Remove an element or a group of elements from the DOM.
-xhr - Alias for new XMLHttpRequest().open() with ajax header and GET method by default.
+xhr - Alias for new XMLHttpRequest, with ajax header and GET method by default.
 ```
