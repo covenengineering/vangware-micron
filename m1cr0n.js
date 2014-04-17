@@ -20,7 +20,7 @@
  *     console.log("Anchor clicked");
  * });
  */
-function ael(E,v,c){((E instanceof Array)?E:[E]).forEach(function(e){e.addEventListener(v,c)});return E}
+function ael(E,v,c){return(E instanceof Array?E:[E]).forEach(function(e){e.addEventListener(v,c)}),E}
 
 /**
  * Set several styles of an element or a group of elements.
@@ -36,7 +36,7 @@ function ael(E,v,c){((E instanceof Array)?E:[E]).forEach(function(e){e.addEventL
  *     color: "#F00"
  * });
  */
-function css(E,S){((E instanceof Array)?E:[E]).forEach(function(e){for(var s in S)e.style[s]=S[s];});return E}
+function css(E,S){return(E instanceof Array?E:[E]).forEach(function(e){for(var s in S)e.style[s]=S[s];}),E}
 
 /**
  * Remove an element or a group of elements from the DOM.
@@ -46,7 +46,7 @@ function css(E,S){((E instanceof Array)?E:[E]).forEach(function(e){for(var s in 
  * @example del(document.body.firstChild); // This will return the first element (after remove it from the DOM)
  * del(get("div.remove")); // This will return an array of divs with remove class (after remove them from the DOM)
  */
-function del(E){((E instanceof Array)?E:[E]).forEach(function(e){e.parentElement.removeChild(e)});return E}
+function del(E){return(E instanceof Array?E:[E]).forEach(function(e){e.parentElement.removeChild(e)}),E}
 
 /**
  * Alias for querySelectorAll, but returning an array instead of a nodeList.
@@ -69,7 +69,7 @@ function get(q,e){var n=(e||document).querySelectorAll(q),a=[],i=n.length;while(
  *     dismiss: "goodbye"
  * }); // This will return "greet=hello&dismiss=goodbye"
  */
-function url(o){var u="",p;for(p in o)u+=((!u.length)?u:"&")+p+"="+encodeURIComponent(o[p]);return u}
+function url(o){var p,u="";for(p in o)u+=(u.length?"&":u)+p+"="+encodeURIComponent(o[p]);return u}
 
 /**
  * Alias for new XMLHttpRequest, with ajax header and GET method by default.
