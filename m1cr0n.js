@@ -7,22 +7,6 @@
 /*jshint asi: true, forin: false */
 
 /**
- * Set several styles of an element or a group of elements.
- *
- * @param {(Element|Element[])} E - DOM Element or Array of DOM Elements to set styles.
- * @param {Object} S - List of styles in Object format.
- * @returns {(Element|Element[])} E - DOM Element or Array of DOM Elements with new styles.
- * @example css(document.body, {
- *     backgroundColor: "#000",
- *     color: "#FFF"
- * });
- * css(get(".important"), {
- *     color: "#F00"
- * });
- */
-function css(E,S){if(E instanceof Array)E.forEach(function(e){css(e,S)});else for(var s in S) E.style[s]=S[s];return E}
-
-/**
  * Listen to an event on an element or a group of elements.
  *
  * @param {(Element|Element[])} E - DOM Element or Array of DOM Elements with event.
@@ -36,19 +20,33 @@ function css(E,S){if(E instanceof Array)E.forEach(function(e){css(e,S)});else fo
  *     console.log("Anchor clicked");
  * });
  */
-function ael(E,v,c){if(E instanceof Array){E.forEach(function(e){ael(e,v,c)})}else{E.addEventListener(v,c)}return E}
+function ael(E,v,c){((E instanceof Array)?E:[E]).forEach(function(e){e.addEventListener(v,c)});return E}
 
 /**
- * Parse an object into URL format for XHR.
+ * Set several styles of an element or a group of elements.
  *
- * @param {Object} o - List of input data for ajax in Object format.
- * @returns {string} u - URL formated string.
- * @example url({
- *     greet: "hello",
- *     dismiss: "goodbye"
- * }); // This will return "greet=hello&dismiss=goodbye"
+ * @param {(Element|Element[])} E - DOM Element or Array of DOM Elements to set styles.
+ * @param {Object} S - List of styles in Object format.
+ * @returns {(Element|Element[])} E - DOM Element or Array of DOM Elements with new styles.
+ * @example css(document.body, {
+ *     backgroundColor: "#000",
+ *     color: "#FFF"
+ * });
+ * css(get(".important"), {
+ *     color: "#F00"
+ * });
  */
-function url(o){var u="",p;for(p in o)u+=((!u.length)?u:"&")+p+"="+encodeURIComponent(o[p]);return u}
+function css(E,S){((E instanceof Array)?E:[E]).forEach(function(e){for(var s in S)e.style[s]=S[s];});return E}
+
+/**
+ * Remove an element or a group of elements from the DOM.
+ *
+ * @param {(Element|Element[])} E - DOM Element or Array of DOM Elements to remove from DOM
+ * @returns {(Element|Element[])} E - DOM Element or Array of DOM Elements removed from DOM
+ * @example del(document.body.firstChild); // This will return the first element (after remove it from the DOM)
+ * del(get("div.remove")); // This will return an array of divs with remove class (after remove them from the DOM)
+ */
+function del(E){((E instanceof Array)?E:[E]).forEach(function(e){e.parentElement.removeChild(e)});return E}
 
 /**
  * Alias for querySelectorAll, but returning an array instead of a nodeList.
@@ -62,14 +60,16 @@ function url(o){var u="",p;for(p in o)u+=((!u.length)?u:"&")+p+"="+encodeURIComp
 function get(q,e){var n=(e||document).querySelectorAll(q),a=[],i=n.length;while(i--){a.unshift(n[i])}return a}
 
 /**
- * Remove an element or a group of elements from the DOM.
+ * Parse an object into URL format for XHR.
  *
- * @param {(Element|Element[])} E - DOM Element or Array of DOM Elements to remove from DOM
- * @returns {(Element|Element[])} E - DOM Element or Array of DOM Elements removed from DOM
- * @example del(document.body.firstChild); // This will return the first element (after remove it from the DOM)
- * del(get("div.remove")); // This will return an array of divs with remove class (after remove them from the DOM)
+ * @param {Object} o - List of input data for ajax in Object format.
+ * @returns {string} u - URL formated string.
+ * @example url({
+ *     greet: "hello",
+ *     dismiss: "goodbye"
+ * }); // This will return "greet=hello&dismiss=goodbye"
  */
-function del(E){if(E instanceof Array)E.forEach(function(e){del(e)});else E.parentElement.removeChild(E);return E}
+function url(o){var u="",p;for(p in o)u+=((!u.length)?u:"&")+p+"="+encodeURIComponent(o[p]);return u}
 
 /**
  * Alias for new XMLHttpRequest, with ajax header and GET method by default.
