@@ -59,7 +59,7 @@ function url(o){var u="",p;for(p in o)u+=((!u.length)?u:"&")+p+"="+encodeURIComp
  * @example get(".menu_link"); // This will return an array of elements with "menu_link" class
  * get(".menu_link", get("header")[0]); // Same as before, but inside the first header on the document.
  */
-function get(q,e){var n=(e||document).querySelectorAll(q),a=[],i=n.length;for(;i--;a.unshift(n[i]));return a}
+function get(q,e){var n=(e||document).querySelectorAll(q),a=[],i=n.length;while(i--){a.unshift(n[i])}return a}
 
 /**
  * Remove an element or a group of elements from the DOM.
