@@ -1,6 +1,6 @@
 /** 
  * @file m1cr0n.js - Standalone helper functions in 1 line.
- * @version 1.1.0
+ * @version 1.5.0
  * @author Lucas M. Ciruzzi <lucasmciruzzi@live.com>
  */
 

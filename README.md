@@ -1,4 +1,4 @@
-m1cr0n
+m1cr0n v1.5.0
 ======
 
 Standalone helper functions in 1 line. Useful for code injection, bookmarklets, debugging, etc.
