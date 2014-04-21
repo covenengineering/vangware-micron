@@ -1,6 +1,6 @@
 /** 
  * @file m1cr0n.js - Standalone helper functions in 1 line.
- * @version 1.5.0
+ * @version 1.6.0
  * @author Lucas M. Ciruzzi <lucasmciruzzi@live.com>
  */
 
@@ -21,6 +21,21 @@
  * });
  */
 function ael(E,v,c){return(E instanceof Array?E:[E]).forEach(function(e){e.addEventListener(v,c)}),E}
+
+/**
+ * Set several attributes of an element or a group of elements.
+ *
+ * @param {(Element|Element[])} E - DOM Element or Array of DOM Elements with event.
+ * @param {Object} A - List of attributes in Object format.
+ * @returns {(Element|Element[])} E - DOM Element or Array of DOM Elements with new attributes.
+ * @example atr(document.body, {
+ *     id: "the-body"
+ * });
+ * atr(get("input"), {
+ *     type: "hidden"
+ * });
+ */
+function atr(E,A){return(E instanceof Array?E:[E]).forEach(function(e){for(var a in A)e.setAttribute(a,A[a])}),E}
 
 /**
  * Set several styles of an element or a group of elements.
