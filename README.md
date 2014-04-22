@@ -1,4 +1,4 @@
-![Vangware logo](http://vangware.com/assets/img/github-logo.png)
+![Vangware logo](http://vangware.github.io/m1cr0n.js/assets/img/logo.png)
 
 m1cr0n.js v1.6.1
 ----
