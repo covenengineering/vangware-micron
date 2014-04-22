@@ -1,12 +1,12 @@
 ![Vangware logo](http://vangware.com/assets/img/github-logo.png)
 
-m1cr0n.js v1.6.0
+m1cr0n.js v1.6.1
 ----
 
 Standalone helper functions in 1 line. Useful for code injection, bookmarklets, debugging, etc.
 
 ```
-ael - Listen to an event on an element or a group of elements.
+ael - Listen to several events on an element or a group of elements.
 atr - Set several attributes of an element or a group of elements.
 css - Set several styles of an element or a group of elements.
 del - Remove an element or a group of elements from the DOM.

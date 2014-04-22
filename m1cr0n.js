@@ -1,16 +1,16 @@
 /** 
  * @file m1cr0n.js - Standalone helper functions in 1 line.
- * @version 1.6.0
+ * @version 1.6.1
  * @author Lucas M. Ciruzzi <lucasmciruzzi@live.com>
  */
 
 /*jshint asi: true, forin: false */
 
 /**
- * Listen to an event on an element or a group of elements.
+ * Listen to several events on an element or a group of elements.
  *
  * @param {(Element|Element[])} E - DOM Element or Array of DOM Elements with event.
- * @param {string} v - Event name.
+ * @param {Object} V - List of events and callbacks in Object format.
  * @param {Function} c - Callback Function.
  * @returns {(Element|Element[])} E - DOM Element or Array of DOM Elements with event.
  * @example ael(window, "blur", function () {
@@ -20,7 +20,7 @@
  *     console.log("Anchor clicked");
  * });
  */
-function ael(E,v,c){return(E instanceof Array?E:[E]).forEach(function(e){e.addEventListener(v,c)}),E}
+function ael(E,V){return(E instanceof Array?E:[E]).forEach(function(e){for(var v in V)e.addEventListener(v,V[v])}),E}
 
 /**
  * Set several attributes of an element or a group of elements.
@@ -51,7 +51,7 @@ function atr(E,A){return(E instanceof Array?E:[E]).forEach(function(e){for(var a
  *     color: "#F00"
  * });
  */
-function css(E,S){return(E instanceof Array?E:[E]).forEach(function(e){for(var s in S)e.style[s]=S[s];}),E}
+function css(E,S){return(E instanceof Array?E:[E]).forEach(function(e){for(var s in S)e.style[s]=S[s]}),E}
 
 /**
  * Remove an element or a group of elements from the DOM.
