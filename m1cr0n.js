@@ -1,7 +1,7 @@
 /** 
  * @file m1cr0n.js - Standalone helper functions in 1 line.
- * @version 1.6.1
- * @author Lucas M. Ciruzzi <lucasmciruzzi@live.com>
+ * @version 1.6.2
+ * @author Vangware - http://vangware.com
  */
 
 /*jshint asi: true, forin: false */
@@ -72,7 +72,7 @@ function del(E){return(E instanceof Array?E:[E]).forEach(function(e){e.parentEle
  * @example get(".menu_link"); // This will return an array of elements with "menu_link" class
  * get(".menu_link", get("header")[0]); // Same as before, but inside the first header on the document.
  */
-function get(q,e){var n=(e||document).querySelectorAll(q),a=[],i=n.length;while(i--){a.unshift(n[i])}return a}
+function get(q,e){var a=[];a.forEach.call((e||document).querySelectorAll(q),function(n,i){a[i]=n});return a}
 
 /**
  * Parse an object into URL format for XHR.
