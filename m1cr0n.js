@@ -8,11 +8,11 @@
 
 
 /**
- * Iterates an array of elements, or sigle elements.
+ * Iterates an array of elements.
  *
- * @param {(Element|Element[])} E - DOM Element or Array of DOM Elements with event.
+ * @param {(Element|Element[])} E - DOM Element or Array of DOM Elements
  * @param {Function} C - Callback Function.
- * @returns {(Element|Element[])} E - DOM Element or Array of DOM Elements with event.
+ * @returns {(Element|Element[])} E - DOM Element or Array of DOM Elements
  */
 function itr(E,C){return(E instanceof Array?E:[E]).forEach(C),E}
 
