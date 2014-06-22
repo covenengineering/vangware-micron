@@ -6,6 +6,16 @@
 
 /*jshint asi: true, forin: false */
 
+
+/**
+ * Iterates an array of elements, or sigle elements.
+ *
+ * @param {(Element|Element[])} E - DOM Element or Array of DOM Elements with event.
+ * @param {Function} C - Callback Function.
+ * @returns {(Element|Element[])} E - DOM Element or Array of DOM Elements with event.
+ */
+function itr(E,C){return(E instanceof Array?E:[E]).forEach(C),E}
+
 /**
  * Listen to several events on an element or a group of elements.
  *
@@ -20,7 +30,7 @@
  *     console.log("Anchor clicked");
  * });
  */
-function ael(E,V){return(E instanceof Array?E:[E]).forEach(function(e){for(var v in V)e.addEventListener(v,V[v])}),E}
+function ael(E,V){return itr(E,function(e){for(var v in V)e.addEventListener(v,V[v])})}
 
 /**
  * Set several attributes of an element or a group of elements.
@@ -35,7 +45,7 @@ function ael(E,V){return(E instanceof Array?E:[E]).forEach(function(e){for(var v
  *     type: "hidden"
  * });
  */
-function atr(E,A){return(E instanceof Array?E:[E]).forEach(function(e){for(var a in A)e.setAttribute(a,A[a])}),E}
+function atr(E,A){return itr(E,function(e){for(var a in A)e.setAttribute(a,A[a])})}
 
 /**
  * Set several styles of an element or a group of elements.
@@ -51,7 +61,7 @@ function atr(E,A){return(E instanceof Array?E:[E]).forEach(function(e){for(var a
  *     color: "#F00"
  * });
  */
-function css(E,S){return(E instanceof Array?E:[E]).forEach(function(e){for(var s in S)e.style[s]=S[s]}),E}
+function css(E,S){return itr(E,function(e){for(var s in S)e.style[s]=S[s]})}
 
 /**
  * Remove an element or a group of elements from the DOM.
@@ -61,7 +71,7 @@ function css(E,S){return(E instanceof Array?E:[E]).forEach(function(e){for(var s
  * @example del(document.body.firstChild); // This will return the first element (after remove it from the DOM)
  * del(get("div.remove")); // This will return an array of divs with remove class (after remove them from the DOM)
  */
-function del(E){return(E instanceof Array?E:[E]).forEach(function(e){e.parentElement.removeChild(e)}),E}
+function del(E){return itr(E,function(e){e.parentElement.removeChild(e)})}
 
 /**
  * Alias for querySelectorAll, but returning an array instead of a nodeList.
