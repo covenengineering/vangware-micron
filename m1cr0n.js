@@ -4,7 +4,8 @@
  * @author Vangware - http://vangware.com
  */
 
-/*jshint asi: true, forin: false */
+/* jshint asi: true, forin: false, strict: false, curly: false */
+/* exported ael, atr, css, del, get, url, xhr */
 
 /**
  * Listen to several events on an element or a group of elements.
