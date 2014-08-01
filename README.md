@@ -1,6 +1,7 @@
 ![Vangware logo](http://vangware.github.io/m1cr0n.js/assets/img/logo.png)
 
 m1cr0n.js v1.6.2 ![Travis Status](https://travis-ci.org/vangware/m1cr0n.js.svg)
+[![[Build Status]](https://travis-ci.org/vangware/m1cr0n.js.svg?branch=master)](https://travis-ci.org/vangware/m1cr0n.js)
 ----
 
 Standalone helper functions in 1 line. Useful for code injection, bookmarklets, debugging, etc.
