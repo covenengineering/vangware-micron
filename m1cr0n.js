@@ -1,10 +1,10 @@
 /** 
  * @file m1cr0n.js - Standalone helper functions in 1 line.
- * @version 1.6.2
+ * @version 1.6.3
  * @author Vangware - http://vangware.com
  */
 
-/* jshint asi: true, forin: false, strict: false, curly: false */
+/* jshint asi: true, forin: false, strict: false, curly: false, -W058: true */
 /* exported ael, atr, css, del, get, url, xhr */
 
 /**
@@ -88,7 +88,7 @@ function get(q,e){var a=[];a.forEach.call((e||document).querySelectorAll(q),func
 function url(o){var p,u="";for(p in o)u+=(u.length?"&":u)+p+"="+encodeURIComponent(o[p]);return u}
 
 /**
- * Alias for new XMLHttpRequest, with ajax header and GET method by default.
+ * Alias for new XMLHttpRequest
  *
  * @param {string} u - URL.
  * @param {string} [m=GET] - Method.
@@ -96,4 +96,4 @@ function url(o){var p,u="";for(p in o)u+=(u.length?"&":u)+p+"="+encodeURICompone
  * @example var getXhr = xhr("http://someurl.com"), // getXhr now has a XMLHttpRequest opened in GET mode for http://someurl.com
  *     postXhr = xhr("http://someurl.com", "POST"); // Same as before, but in POST mode
  */
-function xhr(u,m){var x=new XMLHttpRequest();x.open(m||"GET",u,!0);x.setRequestHeader("Content-type","application/x-www-form-urlencoded;charset=UTF-8");return x}
+function xhr(u,m){var x=new XMLHttpRequest;return x.open(m||"GET",u,!0),x}
