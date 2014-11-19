@@ -1,6 +1,6 @@
 /** 
  * @file m1cr0n.js - Standalone helper functions in 1 line.
- * @version 1.6.3
+ * @version 1.6.4
  * @author Vangware - http://vangware.com
  */
 
@@ -21,7 +21,7 @@
  *     console.log("Anchor clicked");
  * });
  */
-function ael(E,V){return(E instanceof Array?E:[E]).forEach(function(e){for(var v in V)e.addEventListener(v,V[v])}),E}
+var ael=(E,V)=>{return(E instanceof Array?E:[E]).forEach(function(e){for(var v in V)e.addEventListener(v,V[v])}),E};
 
 /**
  * Set several attributes of an element or a group of elements.
@@ -36,7 +36,7 @@ function ael(E,V){return(E instanceof Array?E:[E]).forEach(function(e){for(var v
  *     type: "hidden"
  * });
  */
-function atr(E,A){return(E instanceof Array?E:[E]).forEach(function(e){for(var a in A)e.setAttribute(a,A[a])}),E}
+var atr=(E,A)=>{return(E instanceof Array?E:[E]).forEach(function(e){for(var a in A)e.setAttribute(a,A[a])}),E};
 
 /**
  * Set several styles of an element or a group of elements.
@@ -52,7 +52,7 @@ function atr(E,A){return(E instanceof Array?E:[E]).forEach(function(e){for(var a
  *     color: "#F00"
  * });
  */
-function css(E,S){return(E instanceof Array?E:[E]).forEach(function(e){for(var s in S)e.style[s]=S[s]}),E}
+var css=(E,S)=>{return(E instanceof Array?E:[E]).forEach(function(e){for(var s in S)e.style[s]=S[s]}),E};
 
 /**
  * Remove an element or a group of elements from the DOM.
@@ -62,7 +62,7 @@ function css(E,S){return(E instanceof Array?E:[E]).forEach(function(e){for(var s
  * @example del(document.body.firstChild); // This will return the first element (after remove it from the DOM)
  * del(get("div.remove")); // This will return an array of divs with remove class (after remove them from the DOM)
  */
-function del(E){return(E instanceof Array?E:[E]).forEach(function(e){e.parentElement.removeChild(e)}),E}
+var del=E=>{return(E instanceof Array?E:[E]).forEach(function(e){e.parentElement.removeChild(e)}),E};
 
 /**
  * Alias for querySelectorAll, but returning an array instead of a nodeList.
@@ -73,7 +73,7 @@ function del(E){return(E instanceof Array?E:[E]).forEach(function(e){e.parentEle
  * @example get(".menu_link"); // This will return an array of elements with "menu_link" class
  * get(".menu_link", get("header")[0]); // Same as before, but inside the first header on the document.
  */
-function get(q,e){var a=[];a.forEach.call((e||document).querySelectorAll(q),function(n,i){a[i]=n});return a}
+var get=(q,e)=>{var a=[];a.forEach.call((e||document).querySelectorAll(q),function(n,i){a[i]=n});return a};
 
 /**
  * Parse an object into URL format for XHR.
@@ -85,7 +85,7 @@ function get(q,e){var a=[];a.forEach.call((e||document).querySelectorAll(q),func
  *     dismiss: "goodbye"
  * }); // This will return "greet=hello&dismiss=goodbye"
  */
-function url(o){var p,u="";for(p in o)u+=(u.length?"&":u)+p+"="+encodeURIComponent(o[p]);return u}
+var url=o=>{var p,u="";for(p in o)u+=(u.length?"&":u)+p+"="+encodeURIComponent(o[p]);return u};
 
 /**
  * Alias for new XMLHttpRequest
@@ -96,4 +96,4 @@ function url(o){var p,u="";for(p in o)u+=(u.length?"&":u)+p+"="+encodeURICompone
  * @example var getXhr = xhr("http://someurl.com"), // getXhr now has a XMLHttpRequest opened in GET mode for http://someurl.com
  *     postXhr = xhr("http://someurl.com", "POST"); // Same as before, but in POST mode
  */
-function xhr(u,m){var x=new XMLHttpRequest;return x.open(m||"GET",u,!0),x}
+var xhr=(u,m)=>{var x=new XMLHttpRequest;return x.open(m||"GET",u,!0),x};
