@@ -1,0 +1,17 @@
+{
+	"name": "m1cr0n.js",
+	"version": "1.6.4",
+	"authors": [
+		"lucasmciruzzi <lucasmciruzzi@live.com>"
+	],
+	"description": "Standalone helper arrow functions (ES6) in 1 line",
+	"main": "m1cr0n.js",
+	"keywords": [
+		"standalone",
+		"helpers",
+		"es6",
+		"functions",
+		"minimal"
+	],
+	"license": "MIT"
+}
