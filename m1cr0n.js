@@ -1,10 +1,10 @@
 /** 
  * @file m1cr0n.js - Standalone helper arrow functions (ES6) in 1 line.
- * @version 1.6.4
+ * @version 1.6.5
  * @author Vangware - http://vangware.com
  */
 
-/* jshint asi: true, forin: false, strict: false, curly: false, -W058: true */
+/* jshint asi: true, forin: false, strict: false, curly: false, -W058: true, esnext: true */
 /* exported ael, atr, css, del, get, url, xhr */
 
 /**
