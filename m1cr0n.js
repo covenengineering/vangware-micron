@@ -1,6 +1,6 @@
 /** 
  * @file m1cr0n.js - Standalone helper arrow functions (ES6) in 1 line.
- * @version 1.7.1
+ * @version 1.7.2
  * @author Vangware - http://vangware.com
  */
 
@@ -31,7 +31,7 @@ var atr=(E,A)=>((E instanceof Array?E:[E]).forEach(e=>{for(let a in A)e.setAttri
  *
  * @returns {Object} o - The document cookies object
  */
-var cks=()=>JSON.parse(`{"${(document.cookie).split("; ").map(c=>c.replace(/"/g, "\\\"").replace("=", `":"`)).join(`","`)}"}`);
+var cks=()=>JSON.parse(`{"${document.cookie.split("; ").map(c=>c.replace(/"/g, "\\\"").replace("=", `":"`)).join(`","`)}"}`);
 
 /**
  * Set several styles of an element or a group of elements.
