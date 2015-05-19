@@ -31,7 +31,7 @@ var atr=(E,A)=>((E instanceof Array?E:[E]).forEach(e=>{for(let a in A)e.setAttri
  *
  * @returns {Object} o - The document cookies object
  */
-var cks=()=>JSON.parse(`{"${(document.cookie).split("; ").map(a=>a.replace("=", `":"`)).join(`","`)}"}`);
+var cks=()=>JSON.parse(`{"${(document.cookie).split("; ").map(c=>c.replace("=", `":"`)).join(`","`)}"}`);
 
 /**
  * Set several styles of an element or a group of elements.
