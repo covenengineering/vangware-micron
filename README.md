@@ -1,6 +1,6 @@
-[![[Vangware logo]](https://vangware.com/assets/img/logo.big.svg)](http://vangware.com)
+[![[Vangware logo]](https://vangware.com/assets/img/logo.big.svg)](https://vangware.com)
 
-m1cr0n.js v1.7.2 [![[Build Status]](http://img.shields.io/travis/vangware/m1cr0n.js.svg?style=flat-square)](https://travis-ci.org/vangware/m1cr0n.js)
+m1cr0n.js v1.7.2 [![[Build Status]](https://img.shields.io/travis/vangware/m1cr0n.js.svg?style=flat-square)](https://travis-ci.org/vangware/m1cr0n.js)
 ----
 
 Standalone helper arrow functions (ES6) in 1 line. Useful for code injection, bookmarklets, debugging, etc.
