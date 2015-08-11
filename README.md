@@ -1,4 +1,4 @@
-[![[Vangware logo]](http://vangware.github.io/m1cr0n.js/assets/img/logo.svg)](http://vangware.com)
+[![[Vangware logo]](https://vangware.com/assets/img/logo.big.svg)](http://vangware.com)
 
 m1cr0n.js v1.7.2 [![[Build Status]](http://img.shields.io/travis/vangware/m1cr0n.js.svg?style=flat-square)](https://travis-ci.org/vangware/m1cr0n.js)
 ----
