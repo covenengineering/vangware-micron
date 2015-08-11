@@ -22,3 +22,13 @@ Got to ...
 chrome://flags/#enable-javascript-harmony
 ````
 ... and "Enable Experimental JavaScript". Restart the browser and you are done.
+
+### To use this on Browsers with ES5
+
+Install [https://github.com/babel/babel](Babel) or [https://github.com/Microsoft/TypeScript](TypeScript), and compile this code. Soemthing like...
+````sh
+npm i -g babel typescript
+babel m1cr0n.js > m1cr0n.es5.js
+# or
+mv m1cr0n.js m1cr0n.ts && tsc m1cr0n.ts --target es5 --out m1cron.es5.js
+````
