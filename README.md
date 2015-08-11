@@ -25,7 +25,7 @@ chrome://flags/#enable-javascript-harmony
 
 ### To use this on Browsers with ES5
 
-Install [Babel](https://github.com/babel/babel) or [TypeScript](https://github.com/Microsoft/TypeScript), and compile this code. Soemthing like...
+Install [Babel](https://github.com/babel/babel) or [TypeScript](https://github.com/Microsoft/TypeScript), and compile this code. Something like...
 ````sh
 npm i -g babel typescript
 babel m1cr0n.js > m1cr0n.es5.js
