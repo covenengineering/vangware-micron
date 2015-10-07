@@ -1,6 +1,6 @@
 /** 
  * @file m1cr0n.js - Standalone helper arrow functions (ES6) in 1 line.
- * @version 1.7.5
+ * @version 1.8.0
  * @author Vangware - https://vangware.com
  */
 
@@ -58,6 +58,14 @@ let del=E=>([].forEach.call(E.length?E:[E],e=>{e.parentElement.removeChild(e)}),
  * @returns {Array} - Array of elements.
  */
 let get=(q,e)=>[].map.call((e||document).querySelectorAll(q),n=>n);
+
+/**
+ * Random string generator (up to 16 characters).
+ * Credit: https://github.com/Jacob-Friesen/obscurejs/blob/master/2015/oneLineRandomText.js
+ *
+ * @param {number} l - Length of the random string
+ */
+let rnd=l=>(Math.random()+1).toString(36).substr(2,l);
 
 /**
  * Parse an object into a simple string in URL format for XHR.
