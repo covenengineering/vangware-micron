@@ -1,5 +1,5 @@
 /** 
- * @file m1cr0n.js - Standalone helper arrow functions (ES6) in 1 line.
+ * @file micron.js - Standalone helper arrow functions (ES6) in 1 line.
  * @version 1.8.0
  * @author Vangware - https://vangware.com
  */

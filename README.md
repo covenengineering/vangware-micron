@@ -1,6 +1,6 @@
 [![[Vangware logo]](https://vangware.com/assets/img/logo.big.svg)](https://vangware.com)
 
-m1cr0n.js v1.8.0 [![[Build Status]](https://img.shields.io/travis/vangware/m1cr0n.js.svg?style=flat-square)](https://travis-ci.org/vangware/m1cr0n.js)
+micron v1.8.0 [![[Build Status]](https://img.shields.io/travis/vangware/micron.svg?style=flat-square)](https://travis-ci.org/vangware/micron)
 ----
 
 Standalone helper arrow functions (ES6) in 1 line. Useful for code injection, bookmarklets, debugging, etc.
@@ -29,7 +29,7 @@ chrome://flags/#enable-javascript-harmony
 Install [Babel](https://github.com/babel/babel) or [TypeScript](https://github.com/Microsoft/TypeScript), and compile this code. Something like...
 ````sh
 npm i -g babel typescript
-babel m1cr0n.js > m1cr0n.es5.js
+babel micron.js > micron.es5.js
 # or
-mv m1cr0n.js m1cr0n.ts && tsc m1cr0n.ts --target es5 --out m1cron.es5.js
+mv micron.js micron.ts && tsc micron.ts --target es5 --out m1cron.es5.js
 ````

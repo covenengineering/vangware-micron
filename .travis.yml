@@ -1,4 +1,4 @@
 language: node_js
 sudo: false
 install: npm install jshint
-script: ./node_modules/.bin/jshint m1cr0n.js
+script: ./node_modules/.bin/jshint micron.js
