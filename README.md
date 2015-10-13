@@ -1,4 +1,4 @@
-[![[Vangware logo]](https://vangware.com/assets/img/logo.big.svg)](https://vangware.com)
+[![[Vangware logo]](http://vangware.github.io/micron/assets/img/logo.min.svg)](https://vangware.com)
 
 micron v1.8.0 [![[Build Status]](https://img.shields.io/travis/vangware/micron.svg?style=flat-square)](https://travis-ci.org/vangware/micron)
 ----
