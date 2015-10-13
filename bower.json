@@ -1,11 +1,11 @@
 {
-	"name": "m1cr0n.js",
+	"name": "micron",
 	"version": "1.8.0",
 	"authors": [
 		"lucasmciruzzi <lucasmciruzzi@live.com>"
 	],
 	"description": "Standalone helper arrow functions (ES6) in 1 line",
-	"main": "m1cr0n.js",
+	"main": "micron.js",
 	"keywords": [
 		"standalone",
 		"helpers",
