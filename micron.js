@@ -1,6 +1,6 @@
 /** 
  * @file micron.js - Standalone helper arrow functions (ES6) in 1 line.
- * @version 1.8.0
+ * @version 1.8.5
  * @author Vangware - https://vangware.com
  */
 
@@ -10,21 +10,21 @@
 /**
  * Listen to several events on an element or a group of elements.
  *
- * @param {(Element|Element[]|NodeList)} E - DOM Element or Array of DOM Elements with event.
+ * @param {(Element|Element[])} E - DOM Element or Array of DOM Elements with event.
  * @param {Object} V - List of events and callbacks in Object format.
  * @param {Function} c - Callback Function.
- * @returns {(Element|Element[]|NodeList)} E - DOM Element or Array of DOM Elements with event.
+ * @returns {Element[]} E - DOM Element or Array of DOM Elements with event.
  */
-let ael=(E,V)=>([].forEach.call(E.length?E:[E],e=>{for(let v in V)e.addEventListener(v,V[v])}),E);
+let ael=(E,V)=>(E.length?E:[E]).map(e=>Object.keys(V).map(v=>(e.addEventListener(v,V[v]),e))[0]);
 
 /**
  * Set several attributes of an element or a group of elements.
  *
- * @param {(Element|Element[]|NodeList)} E - DOM Element or Array of DOM Elements with event.
+ * @param {(Element|Element[])} E - DOM Element or Array of DOM Elements with event.
  * @param {Object} A - List of attributes in Object format.
- * @returns {(Element|Element[]|NodeList)} E - DOM Element or Array of DOM Elements with new attributes.
+ * @returns {Element[]} E - DOM Element or Array of DOM Elements with new attributes.
  */
-let atr=(E,A)=>([].forEach.call(E.length?E:[E],e=>{for(let a in A)e.setAttribute(a,A[a])}),E);
+let atr=(E,A)=>(E.length?E:[E]).map(e=>Object.keys(A).map(a=>(e.setAttribute(a,A[a]),e))[0]);
 
 /**
  * Get the current document cookies in object form
@@ -36,28 +36,28 @@ let cks=()=>JSON.parse("{"+document.cookie.split("; ").map(e=>e.replace(/"/g,'\\
 /**
  * Set several styles of an element or a group of elements.
  *
- * @param {(Element|Element[]|NodeList)} E - DOM Element or Array of DOM Elements to set styles.
+ * @param {(Element|Element[])} E - DOM Element or Array of DOM Elements to set styles.
  * @param {Object} S - List of styles in Object format.
- * @returns {(Element|Element[]|NodeList)} E - DOM Element or Array of DOM Elements with new styles.
+ * @returns {Element[]} E - DOM Element or Array of DOM Elements with new styles.
  */
-let css=(E,S)=>([].forEach.call(E.length?E:[E],e=>{for(let s in S)e.style[s]=S[s]}),E);
+let css=(E,S)=>(E.length?E:[E]).map(e=>Object.keys(S).map(s=>(e.style[s]=S[s],e))[0]);
 
 /**
  * Remove an element or a group of elements from the DOM.
  *
- * @param {(Element|Element[]|NodeList)} E - DOM Element or Array of DOM Elements to remove from DOM
- * @returns {(Element|Element[]|NodeList)} E - DOM Element or Array of DOM Elements removed from DOM
+ * @param {(Element|Element[])} E - DOM Element or Array of DOM Elements to remove from DOM
+ * @returns {Element[]} E - DOM Element or Array of DOM Elements removed from DOM
  */
-let del=E=>([].forEach.call(E.length?E:[E],e=>{e.parentElement.removeChild(e)}),E);
+let del=E=>(E.length?E:[E]).map(e=>e.parentElement.removeChild(e));
 
 /**
  * Alias for querySelectorAll, but returning an array instead of a nodeList.
  *
  * @param {string} q - CSS Query.
  * @param {Element} [e=document] - Base element.
- * @returns {Array} - Array of elements.
+ * @returns {Element[]} - Array of elements.
  */
-let get=(q,e)=>[].map.call((e||document).querySelectorAll(q),n=>n);
+let get=(q,e)=>Array.from((e||document).querySelectorAll(q));
 
 /**
  * Random string generator (up to 16 characters).
