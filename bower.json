@@ -1,6 +1,6 @@
 {
 	"name": "micron",
-	"version": "1.8.0",
+	"version": "1.9.0",
 	"authors": [
 		"lucasmciruzzi <lucasmciruzzi@live.com>"
 	],
@@ -16,7 +16,8 @@
 		"XMLHTTPRequest",
 		"DOM",
 		"cookies",
-		"random"
+		"random",
+		"regex"
 	],
 	"license": "MIT"
 }
