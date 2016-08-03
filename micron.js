@@ -1,6 +1,6 @@
 /** 
  * @file micron.js - Standalone helper arrow functions (ES6) in 1 line.
- * @version 1.9.0
+ * @version 1.9.2
  * @author Vangware - https://vangware.com
  */
 
@@ -31,7 +31,7 @@ const atr=(E,A)=>(E.length?E:[E]).map(e=>Object.keys(A).map(a=>(e.setAttribute(a
  *
  * @returns {Object} o - The document cookies object
  */
-const cks=()=>JSON.parse("{"+document.cookie.split("; ").map(e=>e.replace(/"/g,'\\"').replace("=",'":"')).join('","')+"}");
+const cks=()=>decodeURIComponent(document.cookie).split("; ").map(c=>c.split(/=(.+)?/)).map(c=>({[c[0]]:(s=>{try{return JSON.parse(s)}catch(e){return !1}})(c[1])||c[1]})).reduce((o,c)=>Object.assign(o,c));
 
 /**
  * Set several styles of an element or a group of elements.
@@ -40,7 +40,7 @@ const cks=()=>JSON.parse("{"+document.cookie.split("; ").map(e=>e.replace(/"/g,'
  * @param {Object} S - List of styles in Object format.
  * @returns {Element[]} E - DOM Element or Array of DOM Elements with new styles.
  */
-const css=(E,S)=>(E.length?E:[E]).map(e=>Object.keys(S).map(s=>(e.style[s]=S[s],e))[0]);
+const css=(E,S)=>(E.length?E:[E]).map(e=>(Object.assign(e.style,S),e));
 
 /**
  * Remove an element or a group of elements from the DOM.
