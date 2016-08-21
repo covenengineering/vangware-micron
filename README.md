@@ -18,13 +18,6 @@ url - Parse an object into a simple string in URL format for XHR.
 xhr - Alias for new XMLHttpRequest, with GET method by default.
 ```
 
-### To use this on Chrome
-Got to ...
-````
-chrome://flags/#enable-javascript-harmony
-````
-... and "Enable Experimental JavaScript". Restart the browser and you are done.
-
 ### To use this on Browsers with ES5
 
 Install [Babel](https://github.com/babel/babel) or [TypeScript](https://github.com/Microsoft/TypeScript), and compile this code. Something like...
