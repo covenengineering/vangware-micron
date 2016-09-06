@@ -1,6 +1,6 @@
 /** 
- * @file micron.js - Standalone helper arrow functions (ES6) in 1 line.
- * @version 1.9.2
+ * @file Standalone helper arrow functions (ES6) in 1 line.
+ * @version 1.9.3
  * @author Vangware - https://vangware.com
  */
 
@@ -10,60 +10,94 @@
 /**
  * Listen to several events on an element or a group of elements.
  *
- * @param {(Element|Element[])} E - DOM Element or Array of DOM Elements with event.
- * @param {Object} V - List of events and callbacks in Object format.
- * @param {Function} c - Callback Function.
- * @returns {Element[]} E - DOM Element or Array of DOM Elements with event.
+ * @example
+ * // <a id="id">Link</a>
+ * ael(get("#id"), {
+ *   click: event => {
+ *     event.preventDefault();
+ *     console.log("#id element clicked");
+ *   }
+ * });
+ *
+ * @param {(HTMLElement|HTMLElement[])} E DOM Element or Array of DOM Elements with event.
+ * @param {Object} V List of events and callbacks in Object format.
+ * @returns {HTMLElement[]} DOM Element or Array of DOM Elements with event.
  */
 const ael=(E,V)=>(E.length?E:[E]).map(e=>Object.keys(V).map(v=>(e.addEventListener(v,V[v]),e))[0]);
 
 /**
  * Set several attributes of an element or a group of elements.
  *
- * @param {(Element|Element[])} E - DOM Element or Array of DOM Elements with event.
- * @param {Object} A - List of attributes in Object format.
- * @returns {Element[]} E - DOM Element or Array of DOM Elements with new attributes.
+ * @example
+ * // <a id="id">Link</a>
+ * atr(get("#id"), {
+ *   class: "a-class"
+ * });
+ * // <a id="id" class="a-class">Link</a>
+ *
+ * @param {(HTMLElement|HTMLElement[])} E DOM Element or Array of DOM Elements with event.
+ * @param {Object} A List of attributes in Object format.
+ * @returns {HTMLElement[]} DOM Element or Array of DOM Elements with new attributes.
  */
 const atr=(E,A)=>(E.length?E:[E]).map(e=>Object.keys(A).map(a=>(e.setAttribute(a,A[a]),e))[0]);
 
 /**
  * Get the current document cookies in object form
  *
- * @returns {Object} o - The document cookies object
+ * @returns {Object} The document cookies object
  */
 const cks=()=>decodeURIComponent(document.cookie).split("; ").map(c=>c.split(/=(.+)?/)).map(c=>({[c[0]]:(s=>{try{return JSON.parse(s)}catch(e){return !1}})(c[1])||c[1]})).reduce((o,c)=>Object.assign(o,c));
 
 /**
  * Set several styles of an element or a group of elements.
  *
- * @param {(Element|Element[])} E - DOM Element or Array of DOM Elements to set styles.
- * @param {Object} S - List of styles in Object format.
- * @returns {Element[]} E - DOM Element or Array of DOM Elements with new styles.
+ * @example
+ * // <a id="id">Link</a>
+ * css(get("#id"), {
+ *   fontWeight: 700
+ * });
+ * // <a id="id" style="font-weight:700">Link</a>
+ *
+ * @param {(HTMLElement|HTMLElement[])} E DOM Element or Array of DOM Elements to set styles.
+ * @param {Object} S List of styles in Object format.
+ * @returns {HTMLElement[]} DOM Element or Array of DOM Elements with new styles.
  */
 const css=(E,S)=>(E.length?E:[E]).map(e=>(Object.assign(e.style,S),e));
 
 /**
  * Remove an element or a group of elements from the DOM.
  *
- * @param {(Element|Element[])} E - DOM Element or Array of DOM Elements to remove from DOM
- * @returns {Element[]} E - DOM Element or Array of DOM Elements removed from DOM
+ * @example
+ * // <a id="id">Link</a>
+ * del(get("#id")); // Element gets removed from the DOM and returned
+ *
+ * @param {(HTMLElement|HTMLElement[])} E DOM Element or Array of DOM Elements to remove from DOM
+ * @returns {HTMLElement[]} DOM Element or Array of DOM Elements removed from DOM
  */
 const del=E=>(E.length?E:[E]).map(e=>e.parentElement.removeChild(e));
 
 /**
  * Alias for querySelectorAll, but returning an array instead of a nodeList.
  *
- * @param {string} q - CSS Query.
- * @param {Element} [e=document] - Base element.
- * @returns {Element[]} - Array of elements.
+ * @example
+ * // <a id="id">Link</a>
+ * get("#id"); // Above element gets returned
+ *
+ * @param {string} q CSS Query.
+ * @param {HTMLElement} [e=document] Base element.
+ * @returns {HTMLElement[]} Array of elements.
  */
-const get=(q,e)=>Array.from((e||document).querySelectorAll(q));
+const get=(q,e=document)=>Array.from(e.querySelectorAll(q));
 
 /**
  * Takes a string and an object and makes a regex map replace
- * @param  {string} s - String
- * @param  {Object} m - Map with format { "strin to be replaced": "replacing string" }
- * @return {string} s - String with replaced elements from map
+ *
+ * @example
+ * mrx("abc", {"a":1,"b":2,"c":3}); // Returns "123"
+ *
+ * @param  {string} s String
+ * @param  {Object} m Map with format { "string to be replaced": "replacing string" }
+ * @return {string} String with replaced elements from map
  */
 const mrx=(s,m)=>s.replace(new RegExp(Object.keys(m).map(c=>c.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g,"\\$&")).join("|"),"g"),c=>m[c]);
 
@@ -71,23 +105,29 @@ const mrx=(s,m)=>s.replace(new RegExp(Object.keys(m).map(c=>c.replace(/[\-\[\]\/
  * Random string generator (up to 16 characters).
  * Credit: https://github.com/Jacob-Friesen/obscurejs/blob/master/2015/oneLineRandomText.js
  *
- * @param {number} l - Length of the random string
+ * @param {number} l Length of the random string
  */
 const rnd=l=>(Math.random()+1).toString(36).substr(2,l);
 
 /**
  * Parse an object into a simple string in URL format for XHR.
  *
- * @param {Object} o - List of input data for ajax in Object format.
- * @returns {string} - URL formated string.
+ * @example
+ * url({ a: 1, b: 2, c: 3 }); // Returns "a=1&b=2&c=3"
+ *
+ * @param {Object} o List of input data for ajax in Object format.
+ * @returns {string} URL formated string.
  */
 const url=o=>Object.keys(o).map(p=>p+"="+encodeURIComponent(o[p])).join("&");
 
 /**
  * Alias for new XMLHttpRequest, with GET method by default.
  *
- * @param {string} u - URL.
- * @param {string} [m=GET] - Method.
- * @returns {XMLHttpRequest} x - The opened XML HTTP Request.
+ * @example
+ * xhr("/api").send(); // Sends request to /api
+ *
+ * @param {string} u URL.
+ * @param {string} [m=GET] Method.
+ * @returns {XMLHttpRequest} The opened XML HTTP Request.
  */
-const xhr=(u,m)=>{let x=new XMLHttpRequest;return x.open(m||"GET",u),x};
+const xhr=(u,m="GET")=>{let x=new XMLHttpRequest;return x.open(m,u),x};
