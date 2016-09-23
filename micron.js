@@ -1,11 +1,11 @@
 /** 
  * @file Standalone helper arrow functions (ES6) in 1 line.
- * @version 1.9.3
+ * @version 1.9.4
  * @author Vangware - https://vangware.com
  */
 
 /* jshint asi: true, forin: false, strict: false, curly: false, -W058: true, esnext: true */
-/* exported ael, atr, css, del, get, url, xhr */
+/* exported ael, atr, cks, css, del, get, mrx, rnd, url, xhr */
 
 /**
  * Listen to several events on an element or a group of elements.
@@ -118,7 +118,7 @@ const rnd=l=>(Math.random()+1).toString(36).substr(2,l);
  * @param {Object} o List of input data for ajax in Object format.
  * @returns {string} URL formated string.
  */
-const url=o=>Object.keys(o).map(p=>p+"="+encodeURIComponent(o[p])).join("&");
+const url=o=>Object.keys(o).map(p=>Array.isArray(o[p])?o[p].map(r=>p+"[]="+r).join("&"):(typeof o[p]==="object"&&o[p]!==null)?url(Object.keys(o[p]).reduce((r,q)=>Object.assign(r,{[p+`[${q}]`]:o[p][q]}),{})):p+"="+encodeURIComponent(o[p])).join("&");
 
 /**
  * Alias for new XMLHttpRequest, with GET method by default.
