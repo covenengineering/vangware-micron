@@ -1,6 +1,6 @@
 [![[Vangware logo]](https://cdn.rawgit.com/vangware/micron/master/logo.svg)](https://vangware.com)
 
-micron v1.10.0 [![[Build Status]](https://img.shields.io/travis/vangware/micron.svg?style=flat-square)](https://travis-ci.org/vangware/micron)
+micron v1.10.1 [![[Build Status]](https://img.shields.io/travis/vangware/micron.svg?style=flat-square)](https://travis-ci.org/vangware/micron)
 ----
 
 Standalone helper arrow functions (ES6) in 1 line. Useful for code injection, bookmarklets, debugging, etc.
@@ -18,6 +18,11 @@ rnd - Random string generator (up to 16 characters).
 url - Parse an object into a simple string in URL format for XHR.
 xhr - Alias for new XMLHttpRequest, with GET method by default.
 ```
+
+### Is this production ready?
+
+Nope. Obviously. This is just a personal experiment to achieve useful functions in one line with the smallest size.
+I use this functions to make code injection when I'm messing with the front-end of someone.
 
 ### To use this on Browsers with ES5
 
