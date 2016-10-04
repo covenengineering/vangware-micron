@@ -1,11 +1,11 @@
 /** 
  * @file Standalone helper arrow functions (ES6) in 1 line.
- * @version 1.9.5
+ * @version 1.10.0
  * @author Vangware - https://vangware.com
  */
 
 /* jshint asi: true, forin: false, strict: false, curly: false, -W058: true, esnext: true */
-/* exported ael, atr, cks, css, del, get, mrx, rnd, url, xhr */
+/* exported ael, atr, cks, css, del, get, mrx, obj, rnd, url, xhr */
 
 /**
  * Listen to several events on an element or a group of elements.
@@ -42,9 +42,9 @@ const ael=(E,V)=>(E.length?E:[E]).map(e=>Object.keys(V).map(v=>(e.addEventListen
 const atr=(E,A)=>(E.length?E:[E]).map(e=>Object.keys(A).map(a=>(e.setAttribute(a,A[a]),e))[0]);
 
 /**
- * Get the current document cookies in object form
+ * Get the current document cookies in object form.
  *
- * @returns {Object} The document cookies object
+ * @returns {Object} The document cookies object.
  */
 const cks=()=>decodeURIComponent(document.cookie).split("; ").map(c=>c.split(/=(.+)?/)).map(c=>({[c[0]]:(s=>{try{return JSON.parse(s)}catch(e){return !1}})(c[1])||c[1]})).reduce((o,c)=>Object.assign(o,c));
 
@@ -71,8 +71,8 @@ const css=(E,S)=>(E.length?E:[E]).map(e=>(Object.assign(e.style,S),e));
  * // <a id="id">Link</a>
  * del(get("#id")); // Element gets removed from the DOM and returned
  *
- * @param {(HTMLElement|HTMLElement[])} E DOM Element or Array of DOM Elements to remove from DOM
- * @returns {HTMLElement[]} DOM Element or Array of DOM Elements removed from DOM
+ * @param {(HTMLElement|HTMLElement[])} E DOM Element or Array of DOM Elements to remove from DOM.
+ * @returns {HTMLElement[]} DOM Element or Array of DOM Elements removed from DOM.
  */
 const del=E=>(E.length?E:[E]).map(e=>e.parentElement.removeChild(e));
 
@@ -95,17 +95,28 @@ const get=(q,e=document)=>Array.from(e.querySelectorAll(q));
  * @example
  * mrx("abc", {"a":1,"b":2,"c":3}); // Returns "123"
  *
- * @param  {string} s String
- * @param  {Object} m Map with format { "string to be replaced": "replacing string" }
- * @return {string} String with replaced elements from map
+ * @param  {string} s String.
+ * @param  {Object} m Map with format { "string to be replaced": "replacing string" }.
+ * @returns {string} String with replaced elements from map.
  */
 const mrx=(s,m)=>s.replace(new RegExp(Object.keys(m).map(c=>c.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g,"\\$&")).join("|"),"g"),c=>m[c]);
+
+/**
+ * Creates a clean object with a forEach method.
+ *
+ * @example
+ * obj({ a: 1, b: 2, c: 3}).__proto__ === void 0; // true, because is a clean object
+ *
+ * @param {...Object} o Objects to use.
+ * @returns {Object} New clean object.
+ */
+const obj=(...o)=>(O=>(O.defineProperty(O.assign(O.create(null),...o),"forEach",{value(c){O.keys(this).map(k=>c(this[k],k,this))}})))(Object);
 
 /**
  * Random string generator (up to 16 characters).
  * Credit: https://github.com/Jacob-Friesen/obscurejs/blob/master/2015/oneLineRandomText.js
  *
- * @param {number} l Length of the random string
+ * @param {number} l Length of the random string.
  */
 const rnd=l=>(Math.random()+1).toString(36).substr(2,l);
 
