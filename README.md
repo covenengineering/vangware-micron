@@ -1,7 +1,6 @@
-[![[Vangware logo]](https://cdn.rawgit.com/vangware/micron/master/logo.svg)](https://vangware.com)
+[![[Micron logo]](https://cdn.rawgit.com/vangware/micron/master/logo.svg)](https://vangware.com) **v2.0.0**
 
-micron v1.10.1 [![[Build Status]](https://img.shields.io/travis/vangware/micron.svg?style=flat-square)](https://travis-ci.org/vangware/micron)
-----
+[![[Build Status]](https://img.shields.io/travis/vangware/micron.svg?style=flat-square)](https://travis-ci.org/vangware/micron)
 
 Standalone helper arrow functions (ES6) in 1 line. Useful for code injection, bookmarklets, debugging, etc.
 

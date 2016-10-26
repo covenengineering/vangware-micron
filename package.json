@@ -1,0 +1,38 @@
+{
+  "name": "micron.js",
+  "version": "2.0.0",
+  "description": "Standalone helper arrow functions (ES6) in 1 line",
+  "main": "micron.common.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vangware/micron.git"
+  },
+  "keywords": [
+    "standalone",
+    "herlpers",
+    "es6",
+    "es2015",
+    "functions",
+    "minimal",
+    "ajax",
+    "XMLHTTPRequest",
+    "DOM",
+    "cookies",
+    "random",
+    "regex",
+    "object",
+    "clean",
+    "simple",
+    "lightweight",
+    "minimalistic"
+  ],
+  "author": "lucasmciruzzi <lucasmciruzzi@live.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vangware/micron/issues"
+  },
+  "homepage": "https://github.com/vangware/micron#readme",
+  "dependencies": {
+    "@types/node": "^6.0.45"
+  }
+}
