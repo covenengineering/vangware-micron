@@ -1,6 +1,6 @@
 /** 
  * @file Standalone helper arrow functions (ES6) in 1 line.
- * @version 2.0.0
+ * @version 2.1.0
  * @author Vangware - https://vangware.com
  */
 
@@ -142,3 +142,10 @@ const url=o=>Object.keys(o).map(p=>Array.isArray(o[p])?o[p].map(r=>p+"[]="+r).jo
  * @returns {XMLHttpRequest} The opened XML HTTP Request.
  */
 const xhr=(u,m="GET")=>{let x=new XMLHttpRequest;return x.open(m,u),x};
+
+/**
+ * CommonJS export.
+ */
+if (module && module.exports) {
+	module.exports = { ael, atr, cks, css, del, get, mrx, obj, rnd, url, xhr };
+}
