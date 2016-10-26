@@ -1,8 +1,8 @@
 {
   "name": "micron.js",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Standalone helper arrow functions (ES6) in 1 line",
-  "main": "micron.common.js",
+  "main": "micron.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vangware/micron.git"
