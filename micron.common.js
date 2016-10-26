@@ -23,7 +23,7 @@
  * @param {Object} V List of events and callbacks in Object format.
  * @returns {HTMLElement[]} DOM Element or Array of DOM Elements with event.
  */
-const ael=(E,V)=>(E.length?E:[E]).map(e=>Object.keys(V).map(v=>(e.addEventListener(v,V[v]),e))[0]);
+exports.ael=(E,V)=>(E.length?E:[E]).map(e=>Object.keys(V).map(v=>(e.addEventListener(v,V[v]),e))[0]);
 
 /**
  * Set several attributes of an element or a group of elements.
@@ -39,14 +39,14 @@ const ael=(E,V)=>(E.length?E:[E]).map(e=>Object.keys(V).map(v=>(e.addEventListen
  * @param {Object} A List of attributes in Object format.
  * @returns {HTMLElement[]} DOM Element or Array of DOM Elements with new attributes.
  */
-const atr=(E,A)=>(E.length?E:[E]).map(e=>Object.keys(A).map(a=>(e.setAttribute(a,A[a]),e))[0]);
+exports.atr=(E,A)=>(E.length?E:[E]).map(e=>Object.keys(A).map(a=>(e.setAttribute(a,A[a]),e))[0]);
 
 /**
  * Get the current document cookies in object form.
  *
  * @returns {Object} The document cookies object.
  */
-const cks=()=>decodeURIComponent(document.cookie).split("; ").map(c=>c.split(/=(.+)?/)).map(c=>({[c[0]]:(s=>{try{return JSON.parse(s)}catch(e){return !1}})(c[1])||c[1]})).reduce((o,c)=>Object.assign(o,c));
+exports.cks=()=>decodeURIComponent(document.cookie).split("; ").map(c=>c.split(/=(.+)?/)).map(c=>({[c[0]]:(s=>{try{return JSON.parse(s)}catch(e){return !1}})(c[1])||c[1]})).reduce((o,c)=>Object.assign(o,c));
 
 /**
  * Set several styles of an element or a group of elements.
@@ -62,7 +62,7 @@ const cks=()=>decodeURIComponent(document.cookie).split("; ").map(c=>c.split(/=(
  * @param {Object} S List of styles in Object format.
  * @returns {HTMLElement[]} DOM Element or Array of DOM Elements with new styles.
  */
-const css=(E,S)=>(E.length?E:[E]).map(e=>(Object.assign(e.style,S),e));
+exports.css=(E,S)=>(E.length?E:[E]).map(e=>(Object.assign(e.style,S),e));
 
 /**
  * Remove an element or a group of elements from the DOM.
@@ -74,7 +74,7 @@ const css=(E,S)=>(E.length?E:[E]).map(e=>(Object.assign(e.style,S),e));
  * @param {(HTMLElement|HTMLElement[])} E DOM Element or Array of DOM Elements to remove from DOM.
  * @returns {HTMLElement[]} DOM Element or Array of DOM Elements removed from DOM.
  */
-const del=E=>(E.length?E:[E]).map(e=>e.parentElement.removeChild(e));
+exports.del=E=>(E.length?E:[E]).map(e=>e.parentElement.removeChild(e));
 
 /**
  * Alias for querySelectorAll, but returning an array instead of a nodeList.
@@ -87,7 +87,7 @@ const del=E=>(E.length?E:[E]).map(e=>e.parentElement.removeChild(e));
  * @param {HTMLElement} [e=document] Base element.
  * @returns {HTMLElement[]} Array of elements.
  */
-const get=(q,e=document)=>Array.from(e.querySelectorAll(q));
+exports.get=(q,e=document)=>Array.from(e.querySelectorAll(q));
 
 /**
  * Takes a string and an object and makes a regex map replace
@@ -99,7 +99,7 @@ const get=(q,e=document)=>Array.from(e.querySelectorAll(q));
  * @param  {Object} m Map with format { "string to be replaced": "replacing string" }.
  * @returns {string} String with replaced elements from map.
  */
-const mrx=(s,m)=>s.replace(new RegExp(Object.keys(m).map(c=>c.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g,"\\$&")).join("|"),"g"),c=>m[c]);
+exports.mrx=(s,m)=>s.replace(new RegExp(Object.keys(m).map(c=>c.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g,"\\$&")).join("|"),"g"),c=>m[c]);
 
 /**
  * Creates a clean object with a forEach method.
@@ -110,7 +110,7 @@ const mrx=(s,m)=>s.replace(new RegExp(Object.keys(m).map(c=>c.replace(/[\-\[\]\/
  * @param {...Object} o Objects to use.
  * @returns {Object} New clean object.
  */
-const obj=(...o)=>(O=>(O.defineProperty(O.assign(O.create(null),...o),"forEach",{value(c){O.keys(this).map(k=>c(this[k],k,this))}})))(Object);
+exports.obj=(...o)=>(O=>(O.defineProperty(O.assign(O.create(null),...o),"forEach",{value(c){O.keys(this).map(k=>c(this[k],k,this))}})))(Object);
 
 /**
  * Random string generator (up to 16 characters).
@@ -118,7 +118,7 @@ const obj=(...o)=>(O=>(O.defineProperty(O.assign(O.create(null),...o),"forEach",
  *
  * @param {number} l Length of the random string.
  */
-const rnd=l=>(Math.random()+1).toString(36).substr(2,l);
+exports.rnd=l=>(Math.random()+1).toString(36).substr(2,l);
 
 /**
  * Parse an object into a simple string in URL format for XHR.
@@ -129,7 +129,7 @@ const rnd=l=>(Math.random()+1).toString(36).substr(2,l);
  * @param {Object} o List of input data for ajax in Object format.
  * @returns {string} URL formated string.
  */
-const url=o=>Object.keys(o).map(p=>Array.isArray(o[p])?o[p].map(r=>p+"[]="+r).join("&"):(typeof o[p]==="object"&&o[p]!==null)?url(Object.keys(o[p]).reduce((r,q)=>Object.assign(r,{[p+`[${q}]`]:o[p][q]}),{})):p+"="+encodeURIComponent(o[p])).join("&");
+exports.url=o=>Object.keys(o).map(p=>Array.isArray(o[p])?o[p].map(r=>p+"[]="+r).join("&"):(typeof o[p]==="object"&&o[p]!==null)?url(Object.keys(o[p]).reduce((r,q)=>Object.assign(r,{[p+`[${q}]`]:o[p][q]}),{})):p+"="+encodeURIComponent(o[p])).join("&");
 
 /**
  * Alias for new XMLHttpRequest, with GET method by default.
@@ -141,4 +141,4 @@ const url=o=>Object.keys(o).map(p=>Array.isArray(o[p])?o[p].map(r=>p+"[]="+r).jo
  * @param {string} [m=GET] Method.
  * @returns {XMLHttpRequest} The opened XML HTTP Request.
  */
-const xhr=(u,m="GET")=>{let x=new XMLHttpRequest;return x.open(m,u),x};
+exports.xhr=(u,m="GET")=>{let x=new XMLHttpRequest;return x.open(m,u),x};
