@@ -6,12 +6,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /** 
  * @file Standalone helper arrow functions (ES6) in 1 line.
- * @version 2.3.0
+ * @version 2.4.0
  * @author Vangware - https://vangware.com
  */
 
 /* jshint asi: true, forin: false, strict: false, curly: false, -W058: true, esnext: true */
-/* exported ael, atr, cks, css, del, dom, get, mrx, obj, rnd, url, xhr */
+/* exported ael, atr, cks, css, del, dom, get, mrx, obj, pad, rnd, url, xhr */
 
 /**
  * Listen to several events on an element or a group of elements.
@@ -191,6 +191,22 @@ var obj = function obj() {
 };
 
 /**
+ * Add padding zeros to passed number.
+ *
+ * @example
+ * pad(1); // Returns "01"
+ * pad(2, 5); // Returns "00002"
+ *
+ * @param {number} n Number to be padded.
+ * @param {number} [l=2] Total length of resulting number.
+ * @returns {string} Padded number.
+ */
+var pad = function pad(n) {
+  var l = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;
+  return ("" + n).length < l ? pad("0" + n, l) : "" + n;
+};
+
+/**
  * Random string generator (up to 16 characters).
  * Credit: https://github.com/Jacob-Friesen/obscurejs/blob/master/2015/oneLineRandomText.js
  *
@@ -239,5 +255,5 @@ var xhr = function xhr(u) {
  * CommonJS export.
  */
 if (module && module.exports) {
-  module.exports = { ael: ael, atr: atr, cks: cks, css: css, del: del, dom: dom, get: get, mrx: mrx, obj: obj, rnd: rnd, url: url, xhr: xhr };
+  module.exports = { ael: ael, atr: atr, cks: cks, css: css, del: del, dom: dom, get: get, mrx: mrx, obj: obj, pad: pad, rnd: rnd, url: url, xhr: xhr };
 }
