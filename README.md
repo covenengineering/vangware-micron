@@ -10,6 +10,7 @@ atr - Set several attributes of an element or a group of elements.
 cks - Get the current document cookies in object form.
 css - Set several styles of an element or a group of elements.
 del - Remove an element or a group of elements from the DOM.
+dom - Parse string into DOM.
 get - Alias for querySelectorAll, but returning an array instead of a nodeList.
 mrx - Takes a string and an object and makes a regex map replace.
 obj - Creates a clean object with a forEach method.

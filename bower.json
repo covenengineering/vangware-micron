@@ -1,6 +1,6 @@
 {
 	"name": "micron",
-	"version": "2.2.1",
+	"version": "2.3.0",
 	"authors": [
 		"lucasmciruzzi <lucasmciruzzi@live.com>"
 	],
@@ -21,7 +21,8 @@
 		"object",
 		"clean",
 		"simple",
-		"lightweight"
+		"lightweight",
+		"dom"
 	],
 	"license": "MIT"
 }
