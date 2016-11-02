@@ -1,4 +1,4 @@
-[![[Micron logo]](https://cdn.rawgit.com/vangware/micron/master/logo.svg)](https://vangware.com) **v2.2.1**
+[![[Micron logo]](https://cdn.rawgit.com/vangware/micron/master/logo.svg)](https://vangware.com) **v2.4.0**
 
 [![[Build Status]](https://img.shields.io/travis/vangware/micron.svg?style=flat-square)](https://travis-ci.org/vangware/micron)
 
@@ -14,6 +14,7 @@ dom - Parse string into DOM.
 get - Alias for querySelectorAll, but returning an array instead of a nodeList.
 mrx - Takes a string and an object and makes a regex map replace.
 obj - Creates a clean object with a forEach method.
+pad - Add padding zeros to passed number.
 rnd - Random string generator (up to 16 characters).
 url - Parse an object into a simple string in URL format for XHR.
 xhr - Alias for new XMLHttpRequest, with GET method by default.

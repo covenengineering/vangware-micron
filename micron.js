@@ -1,11 +1,11 @@
 /** 
  * @file Standalone helper arrow functions (ES6) in 1 line.
- * @version 2.3.0
+ * @version 2.4.0
  * @author Vangware - https://vangware.com
  */
 
 /* jshint asi: true, forin: false, strict: false, curly: false, -W058: true, esnext: true */
-/* exported ael, atr, cks, css, del, dom, get, mrx, obj, rnd, url, xhr */
+/* exported ael, atr, cks, css, del, dom, get, mrx, obj, pad, rnd, url, xhr */
 
 /**
  * Listen to several events on an element or a group of elements.
@@ -124,6 +124,19 @@ const mrx=(s,m)=>s.replace(new RegExp(Object.keys(m).map(c=>c.replace(/[\-\[\]\/
 const obj=(...o)=>(O=>(O.defineProperty(O.assign(O.create(null),...o),"forEach",{value(c){O.keys(this).map(k=>c(this[k],k,this))}})))(Object);
 
 /**
+ * Add padding zeros to passed number.
+ *
+ * @example
+ * pad(1); // Returns "01"
+ * pad(2, 5); // Returns "00002"
+ *
+ * @param {number} n Number to be padded.
+ * @param {number} [l=2] Total length of resulting number.
+ * @returns {string} Padded number.
+ */
+const pad=(n,l=2)=>(`${n}`.length<l)?pad(`0${n}`,l):`${n}`;
+
+/**
  * Random string generator (up to 16 characters).
  * Credit: https://github.com/Jacob-Friesen/obscurejs/blob/master/2015/oneLineRandomText.js
  *
@@ -159,5 +172,5 @@ const xhr=(u,m="GET")=>{let x=new XMLHttpRequest;return x.open(m,u),x};
  * CommonJS export.
  */
 if (module && module.exports) {
-	module.exports = { ael, atr, cks, css, del, dom, get, mrx, obj, rnd, url, xhr };
+	module.exports = { ael, atr, cks, css, del, dom, get, mrx, obj, pad, rnd, url, xhr };
 }
