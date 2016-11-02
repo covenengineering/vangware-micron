@@ -1,6 +1,6 @@
 {
   "name": "micron.js",
-  "version": "2.2.1",
+  "version": "2.3.0",
   "description": "Standalone helper arrow functions (ES6) in 1 line",
   "main": "micron.es5.js",
   "repository": {
@@ -24,7 +24,8 @@
     "clean",
     "simple",
     "lightweight",
-    "minimalistic"
+    "minimalistic",
+	"dom"
   ],
   "author": "lucasmciruzzi <lucasmciruzzi@live.com>",
   "license": "MIT",

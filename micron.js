@@ -1,11 +1,11 @@
 /** 
  * @file Standalone helper arrow functions (ES6) in 1 line.
- * @version 2.2.0
+ * @version 2.3.0
  * @author Vangware - https://vangware.com
  */
 
 /* jshint asi: true, forin: false, strict: false, curly: false, -W058: true, esnext: true */
-/* exported ael, atr, cks, css, del, get, mrx, obj, rnd, url, xhr */
+/* exported ael, atr, cks, css, del, dom, get, mrx, obj, rnd, url, xhr */
 
 /**
  * Listen to several events on an element or a group of elements.
@@ -75,6 +75,17 @@ const css=(E,S)=>(E.length?E:[E]).map(e=>(Object.assign(e.style,S),e));
  * @returns {HTMLElement[]} DOM Element or Array of DOM Elements removed from DOM.
  */
 const del=E=>(E.length?E:[E]).map(e=>e.parentElement.removeChild(e));
+
+/**
+ * Parse string into DOM.
+ *
+ * @example
+ * dom("<a>Hello world</a>"); // Returns document object with that link on the body
+ *
+ * @param {string} S String to be parsed.
+ * @returns {Document} Parsed DOM.
+ */
+const dom=S=>(new DOMParser).parseFromString(S,"text/html");
 
 /**
  * Alias for querySelectorAll, but returning an array instead of a nodeList.
@@ -148,5 +159,5 @@ const xhr=(u,m="GET")=>{let x=new XMLHttpRequest;return x.open(m,u),x};
  * CommonJS export.
  */
 if (module && module.exports) {
-	module.exports = { ael, atr, cks, css, del, get, mrx, obj, rnd, url, xhr };
+	module.exports = { ael, atr, cks, css, del, dom, get, mrx, obj, rnd, url, xhr };
 }

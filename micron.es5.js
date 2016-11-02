@@ -6,12 +6,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /** 
  * @file Standalone helper arrow functions (ES6) in 1 line.
- * @version 2.2.0
+ * @version 2.3.0
  * @author Vangware - https://vangware.com
  */
 
 /* jshint asi: true, forin: false, strict: false, curly: false, -W058: true, esnext: true */
-/* exported ael, atr, cks, css, del, get, mrx, obj, rnd, url, xhr */
+/* exported ael, atr, cks, css, del, dom, get, mrx, obj, rnd, url, xhr */
 
 /**
  * Listen to several events on an element or a group of elements.
@@ -114,6 +114,19 @@ var del = function del(E) {
   return (E.length ? E : [E]).map(function (e) {
     return e.parentElement.removeChild(e);
   });
+};
+
+/**
+ * Parse string into DOM.
+ *
+ * @example
+ * dom("<a>Hello world</a>"); // Returns document object with that link on the body
+ *
+ * @param {string} S String to be parsed.
+ * @returns {Document} Parsed DOM.
+ */
+var dom = function dom(S) {
+  return new DOMParser().parseFromString(S, "text/html");
 };
 
 /**
@@ -226,5 +239,5 @@ var xhr = function xhr(u) {
  * CommonJS export.
  */
 if (module && module.exports) {
-  module.exports = { ael: ael, atr: atr, cks: cks, css: css, del: del, get: get, mrx: mrx, obj: obj, rnd: rnd, url: url, xhr: xhr };
+  module.exports = { ael: ael, atr: atr, cks: cks, css: css, del: del, dom: dom, get: get, mrx: mrx, obj: obj, rnd: rnd, url: url, xhr: xhr };
 }
