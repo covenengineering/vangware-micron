@@ -1,17 +1,8 @@
-"use strict";
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 /** 
  * @file Standalone helper arrow functions (ES6) in 1 line.
- * @version 2.4.1
+ * @version 3.0.0
  * @author Vangware - https://vangware.com
  */
-
-/* jshint asi: true, forin: false, strict: false, curly: false, -W058: true, esnext: true */
-/* exported ael, atr, cks, css, del, dom, get, mrx, obj, pad, rnd, url, xhr */
 
 /**
  * Listen to several events on an element or a group of elements.
@@ -27,15 +18,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
  *
  * @param {(HTMLElement|HTMLElement[])} E DOM Element or Array of DOM Elements with event.
  * @param {Object} V List of events and callbacks in Object format.
+ * @exports
  * @returns {HTMLElement[]} DOM Element or Array of DOM Elements with event.
  */
-var ael = function ael(E, V) {
-  return (E.length ? E : [E]).map(function (e) {
-    return Object.keys(V).map(function (v) {
-      return e.addEventListener(v, V[v]), e;
-    })[0];
-  });
-};
+const ael=(E,V)=>(E.length?E:[E]).map(e=>Object.keys(V).map(v=>(e.addEventListener(v,V[v]),e))[0]);
 
 /**
  * Set several attributes of an element or a group of elements.
@@ -49,36 +35,18 @@ var ael = function ael(E, V) {
  *
  * @param {(HTMLElement|HTMLElement[])} E DOM Element or Array of DOM Elements with event.
  * @param {Object} A List of attributes in Object format.
+ * @exports
  * @returns {HTMLElement[]} DOM Element or Array of DOM Elements with new attributes.
  */
-var atr = function atr(E, A) {
-  return (E.length ? E : [E]).map(function (e) {
-    return Object.keys(A).map(function (a) {
-      return e.setAttribute(a, A[a]), e;
-    })[0];
-  });
-};
+const atr=(E,A)=>(E.length?E:[E]).map(e=>Object.keys(A).map(a=>(e.setAttribute(a,A[a]),e))[0]);
 
 /**
  * Get the current document cookies in object form.
  *
+ * @exports
  * @returns {Object} The document cookies object.
  */
-var cks = function cks() {
-  return decodeURIComponent(document.cookie).split("; ").map(function (c) {
-    return c.split(/=(.+)?/);
-  }).map(function (c) {
-    return _defineProperty({}, c[0], function (s) {
-      try {
-        return JSON.parse(s);
-      } catch (e) {
-        return !1;
-      }
-    }(c[1]) || c[1]);
-  }).reduce(function (o, c) {
-    return Object.assign(o, c);
-  });
-};
+const cks=()=>decodeURIComponent(document.cookie).split("; ").map(c=>c.split(/=(.+)?/)).map(c=>({[c[0]]:(s=>{try{return JSON.parse(s)}catch(e){return !1}})(c[1])||c[1]})).reduce((o,c)=>Object.assign(o,c));
 
 /**
  * Set several styles of an element or a group of elements.
@@ -92,13 +60,10 @@ var cks = function cks() {
  *
  * @param {(HTMLElement|HTMLElement[])} E DOM Element or Array of DOM Elements to set styles.
  * @param {Object} S List of styles in Object format.
+ * @exports
  * @returns {HTMLElement[]} DOM Element or Array of DOM Elements with new styles.
  */
-var css = function css(E, S) {
-  return (E.length ? E : [E]).map(function (e) {
-    return Object.assign(e.style, S), e;
-  });
-};
+const css=(E,S)=>(E.length?E:[E]).map(e=>(Object.assign(e.style,S),e));
 
 /**
  * Remove an element or a group of elements from the DOM.
@@ -108,13 +73,10 @@ var css = function css(E, S) {
  * del(get("#id")); // Element gets removed from the DOM and returned
  *
  * @param {(HTMLElement|HTMLElement[])} E DOM Element or Array of DOM Elements to remove from DOM.
+ * @exports
  * @returns {HTMLElement[]} DOM Element or Array of DOM Elements removed from DOM.
  */
-var del = function del(E) {
-  return (E.length ? E : [E]).map(function (e) {
-    return e.parentElement.removeChild(e);
-  });
-};
+const del=E=>(E.length?E:[E]).map(e=>e.parentElement.removeChild(e));
 
 /**
  * Parse string into DOM.
@@ -123,11 +85,10 @@ var del = function del(E) {
  * dom("<a>Hello world</a>"); // Returns document object with that link on the body
  *
  * @param {string} S String to be parsed.
+ * @exports
  * @returns {Document} Parsed DOM.
  */
-var dom = function dom(S) {
-  return new DOMParser().parseFromString(S, "text/html");
-};
+const dom=S=>(new DOMParser).parseFromString(S,"text/html");
 
 /**
  * Alias for querySelectorAll, but returning an array instead of a nodeList.
@@ -138,12 +99,10 @@ var dom = function dom(S) {
  *
  * @param {string} q CSS Query.
  * @param {HTMLElement} [e=document] Base element.
+ * @exports
  * @returns {HTMLElement[]} Array of elements.
  */
-var get = function get(q) {
-  var e = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : document;
-  return Array.from(e.querySelectorAll(q));
-};
+const get=(q,e=document)=>Array.from(e.querySelectorAll(q));
 
 /**
  * Takes a string and an object and makes a regex map replace
@@ -153,15 +112,10 @@ var get = function get(q) {
  *
  * @param  {string} s String.
  * @param  {Object} m Map with format { "string to be replaced": "replacing string" }.
+ * @exports
  * @returns {string} String with replaced elements from map.
  */
-var mrx = function mrx(s, m) {
-  return s.replace(new RegExp(Object.keys(m).map(function (c) {
-    return c.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
-  }).join("|"), "g"), function (c) {
-    return m[c];
-  });
-};
+const mrx=(s,m)=>s.replace(new RegExp(Object.keys(m).map(c=>c.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g,"\\$&")).join("|"),"g"),c=>m[c]);
 
 /**
  * Creates a clean object with a forEach method.
@@ -170,25 +124,10 @@ var mrx = function mrx(s, m) {
  * obj({ a: 1, b: 2, c: 3}).__proto__ === void 0; // true, because is a clean object
  *
  * @param {...Object} o Objects to use.
+ * @exports
  * @returns {Object} New clean object.
  */
-var obj = function obj() {
-  for (var _len = arguments.length, o = Array(_len), _key = 0; _key < _len; _key++) {
-    o[_key] = arguments[_key];
-  }
-
-  return function (O) {
-    return O.defineProperty(O.assign.apply(O, [O.create(null)].concat(o)), "forEach", {
-      value: function value(c) {
-        var _this = this;
-
-        O.keys(this).map(function (k) {
-          return c(_this[k], k, _this);
-        });
-      }
-    });
-  }(Object);
-};
+const obj=(...o)=>(O=>(O.defineProperty(O.assign(O.create(null),...o),"forEach",{value(c){O.keys(this).map(k=>c(this[k],k,this))}})))(Object);
 
 /**
  * Add padding zeros to passed number.
@@ -199,22 +138,20 @@ var obj = function obj() {
  *
  * @param {number} n Number to be padded.
  * @param {number} [l=2] Total length of resulting number.
+ * @exports
  * @returns {string} Padded number.
  */
-var pad = function pad(n) {
-  var l = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;
-  return ("" + n).length < l ? pad("0" + n, l) : "" + n;
-};
+const pad=(n,l=2)=>(`${n}`.length<l)?pad(`0${n}`,l):`${n}`;
 
 /**
  * Random string generator (up to 16 characters).
  * Credit: https://github.com/Jacob-Friesen/obscurejs/blob/master/2015/oneLineRandomText.js
  *
  * @param {number} l Length of the random string.
+ * @exports
+ * @returns {string} A random string.
  */
-var rnd = function rnd(l) {
-  return (Math.random() + 1).toString(36).substr(2, l);
-};
+const rnd=l=>(Math.random()+1).toString(36).substr(2,l);
 
 /**
  * Parse an object into a simple string in URL format for XHR.
@@ -224,17 +161,10 @@ var rnd = function rnd(l) {
  * url({ a: [1, 2, 3], b: { c: 1, d: 2 } }) // Returns "a[0]=1&a[1]=2&a[2]=3&b[c]=1&b[d]=2"
  *
  * @param {Object} o List of input data for ajax in Object format.
+ * @exports
  * @returns {string} URL formated string.
  */
-var url = function url(o) {
-  return Object.keys(o).map(function (p) {
-    return Array.isArray(o[p]) ? o[p].map(function (r, q) {
-      return url(_defineProperty({}, p + ("[" + q + "]"), r));
-    }).join("&") : _typeof(o[p]) === "object" && o[p] !== null ? url(Object.keys(o[p]).reduce(function (r, q) {
-      return Object.assign(r, _defineProperty({}, p + ("[" + q + "]"), o[p][q]));
-    }, {})) : p + "=" + encodeURIComponent(o[p]);
-  }).join("&");
-};
+const url=o=>Object.keys(o).map(p=>Array.isArray(o[p])?o[p].map((r,q)=>url({[p+`[${q}]`]:r})).join("&"):(typeof o[p]==="object"&&o[p]!==null)?url(Object.keys(o[p]).reduce((r,q)=>Object.assign(r,{[p+`[${q}]`]:o[p][q]}),{})):p+"="+encodeURIComponent(o[p])).join("&");
 
 /**
  * Alias for new XMLHttpRequest, with GET method by default.
@@ -244,16 +174,9 @@ var url = function url(o) {
  *
  * @param {string} u URL.
  * @param {string} [m=GET] Method.
+ * @exports
  * @returns {XMLHttpRequest} The opened XML HTTP Request.
  */
-var xhr = function xhr(u) {
-  var m = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "GET";
-  var x = new XMLHttpRequest();return x.open(m, u), x;
-};
+const xhr=(u,m="GET")=>{let x=new XMLHttpRequest;return x.open(m,u),x};
 
-/**
- * CommonJS export.
- */
-if (module && module.exports) {
-  module.exports = { ael: ael, atr: atr, cks: cks, css: css, del: del, dom: dom, get: get, mrx: mrx, obj: obj, pad: pad, rnd: rnd, url: url, xhr: xhr };
-}
+export { ael, atr, cks, css, del, dom, get, mrx, obj, pad, rnd, url, xhr }
