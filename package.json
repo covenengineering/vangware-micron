@@ -1,11 +1,14 @@
 {
   "name": "micron.js",
-  "version": "2.4.1",
+  "version": "3.0.0",
   "description": "Standalone helper arrow functions (ES6) in 1 line",
-  "main": "micron.es5.js",
+  "main": "micron.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vangware/micron.git"
+  },
+  "scripts": {
+    "postinstall": "tsc"
   },
   "keywords": [
     "standalone",
@@ -25,16 +28,20 @@
     "simple",
     "lightweight",
     "minimalistic",
-	"dom",
-	"padding"
+    "dom",
+    "padding"
   ],
-  "author": "lucasmciruzzi <lucasmciruzzi@live.com>",
+  "author": {
+    "name": "Vangware",
+    "url": "https://vangware.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/vangware/micron/issues"
   },
   "homepage": "https://github.com/vangware/micron#readme",
   "dependencies": {
-    "@types/node": "^6.0.45"
+    "@types/node": "^8.0.26",
+    "typescript": "^2.5.2"
   }
 }
