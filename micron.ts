@@ -1,7 +1,7 @@
 /** 
  * @file Standalone helper arrow functions (ES6) in 1 line.
- * @version 3.0.0
- * @author Vangware - https://vangware.com
+ * @version 3.1.0
+ * @author Vangware <https://vangware.com>
  */
 
 /**
@@ -144,14 +144,23 @@ const obj=(...o)=>(O=>(O.defineProperty(O.assign(O.create(null),...o),"forEach",
 const pad=(n,l=2)=>(`${n}`.length<l)?pad(`0${n}`,l):`${n}`;
 
 /**
- * Random string generator (up to 16 characters).
+ * Random string generator (up to 10 characters).
  * Credit: https://github.com/Jacob-Friesen/obscurejs/blob/master/2015/oneLineRandomText.js
  *
  * @param {number} l Length of the random string.
  * @exports
  * @returns {string} A random string.
  */
-const rnd=l=>(Math.random()+1).toString(36).substr(2,l);
+const rnd=(l=10)=>Math.random().toString(36).substr(2,l>10?10:l<1?1:l);
+
+/**
+ * Timestamp string hash generator (up to 8 characters).
+ *
+ * @param {number} l Length of the random string (8 max).
+ * @exports
+ * @returns {string} A timestamp hash.
+ */
+const tsh=(l=8)=>Date.now().toString(36).slice(0,l>8?8:l<1?1:l);
 
 /**
  * Parse an object into a simple string in URL format for XHR.
@@ -179,4 +188,4 @@ const url=o=>Object.keys(o).map(p=>Array.isArray(o[p])?o[p].map((r,q)=>url({[p+`
  */
 const xhr=(u,m="GET")=>{let x=new XMLHttpRequest;return x.open(m,u),x};
 
-export { ael, atr, cks, css, del, dom, get, mrx, obj, pad, rnd, url, xhr }
+export { ael, atr, cks, css, del, dom, get, mrx, obj, pad, rnd, tsh, url, xhr }
