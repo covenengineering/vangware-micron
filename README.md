@@ -1,4 +1,6 @@
-[![[Micron logo]](https://cdn.rawgit.com/vangware/micron/master/logo.svg)](https://vangware.com) **v3.1.0**
+# micron.js
+
+[![[Micron logo]](https://cdn.rawgit.com/vangware/micron/master/logo.svg)](https://vangware.com)
 
 [![[Build Status]](https://img.shields.io/travis/vangware/micron.svg?style=flat-square)](https://travis-ci.org/vangware/micron)
 
@@ -20,3 +22,5 @@ tsh(); // Timestamp string hash generator (up to 8 characters).
 url(); // Parse an object into a simple string in URL format for XHR.
 xhr(); // Alias for new XMLHttpRequest, with GET method by default.
 ```
+
+Check [the documentation](DOCUMENTATION.md) for more details.

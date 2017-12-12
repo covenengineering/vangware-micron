@@ -1,6 +1,6 @@
 {
   "name": "micron.js",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "Standalone helper arrow functions (ES6) in 1 line",
   "main": "micron.js",
   "repository": {
@@ -8,7 +8,8 @@
     "url": "git+https://github.com/vangware/micron.git"
   },
   "scripts": {
-    "postinstall": "tsc"
+    "postinstall": "tsc",
+    "precommit": "tsc && jsdoc2md micron.js > DOCUMENTATION.md"
   },
   "keywords": [
     "standalone",
@@ -44,5 +45,9 @@
   "dependencies": {
     "@types/node": "^8.0.28",
     "typescript": "^2.5.2"
+  },
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "jsdoc-to-markdown": "^3.0.2"
   }
 }
