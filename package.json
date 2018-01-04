@@ -1,6 +1,6 @@
 {
   "name": "micron.js",
-  "version": "3.2.1",
+  "version": "3.2.2",
   "description": "Standalone helper arrow functions (ES6) in 1 line",
   "main": "micron.js",
   "repository": {
@@ -44,7 +44,6 @@
   "devDependencies": {
     "@types/node": "^8.0.58",
     "husky": "^0.14.3",
-    "jsdoc-to-markdown": "^3.0.2",
     "typescript": "^2.6.2"
   },
   "engines": {
