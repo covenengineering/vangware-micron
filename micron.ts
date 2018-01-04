@@ -1,6 +1,6 @@
 /** 
  * @file Standalone helper arrow functions (ES6) in 1 line.
- * @version 3.2.2
+ * @version 3.2.3
  * @author Vangware <https://vangware.com>
  */
 
