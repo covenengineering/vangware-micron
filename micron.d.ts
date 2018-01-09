@@ -1,10 +1,8 @@
-"use strict";
 /**
  * @file Standalone helper arrow functions (ES6) in 1 line.
  * @version 3.2.4
  * @author Vangware <https://vangware.com>
  */
-Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * Listen to several events on an element or a group of elements.
  *
@@ -22,8 +20,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @exports ael
  * @returns {HTMLElement[]} DOM Element or Array of DOM Elements with event.
  */
-const ael = (E, V) => (E.length ? E : [E]).map(e => Object.keys(V).map(v => (e.addEventListener(v, V[v]), e))[0]);
-exports.ael = ael;
+declare const ael: (E: any, V: any) => any;
 /**
  * Set several attributes of an element or a group of elements.
  *
@@ -39,21 +36,16 @@ exports.ael = ael;
  * @exports atr
  * @returns {HTMLElement[]} DOM Element or Array of DOM Elements with new attributes.
  */
-const atr = (E, A) => (E.length ? E : [E]).map(e => Object.keys(A).map(a => (e.setAttribute(a, A[a]), e))[0]);
-exports.atr = atr;
+declare const atr: (E: any, A: any) => any;
 /**
  * Get the current document cookies in object form.
  *
  * @exports cks
  * @returns {Object} The document cookies object.
  */
-const cks = () => decodeURIComponent(document.cookie).split("; ").map(c => c.split(/=(.+)?/)).map(c => ({ [c[0]]: (s => { try {
-        return JSON.parse(s);
-    }
-    catch (e) {
-        return !1;
-    } })(c[1]) || c[1] })).reduce((o, c) => Object.assign(o, c));
-exports.cks = cks;
+declare const cks: () => {
+    [x: string]: any;
+};
 /**
  * Set several styles of an element or a group of elements.
  *
@@ -69,8 +61,7 @@ exports.cks = cks;
  * @exports css
  * @returns {HTMLElement[]} DOM Element or Array of DOM Elements with new styles.
  */
-const css = (E, S) => (E.length ? E : [E]).map(e => (Object.assign(e.style, S), e));
-exports.css = css;
+declare const css: (E: any, S: any) => any;
 /**
  * Remove an element or a group of elements from the DOM.
  *
@@ -82,8 +73,7 @@ exports.css = css;
  * @exports del
  * @returns {HTMLElement[]} DOM Element or Array of DOM Elements removed from DOM.
  */
-const del = E => (E.length ? E : [E]).map(e => e.parentElement.removeChild(e));
-exports.del = del;
+declare const del: (E: any) => any;
 /**
  * Parse string into DOM.
  *
@@ -94,8 +84,7 @@ exports.del = del;
  * @exports dom
  * @returns {Document} Parsed DOM.
  */
-const dom = S => (new DOMParser).parseFromString(S, "text/html");
-exports.dom = dom;
+declare const dom: (S: any) => Document;
 /**
  * Alias for querySelectorAll, but returning an array instead of a nodeList.
  *
@@ -108,8 +97,7 @@ exports.dom = dom;
  * @exports get
  * @returns {HTMLElement[]} Array of elements.
  */
-const get = (q, e = document) => Array.from(e.querySelectorAll(q));
-exports.get = get;
+declare const get: (q: any, e?: Document) => {}[];
 /**
  * Takes a string and an object and makes a regex map replace
  *
@@ -121,8 +109,7 @@ exports.get = get;
  * @exports mrx
  * @returns {string} String with replaced elements from map.
  */
-const mrx = (s, m) => s.replace(new RegExp(Object.keys(m).map(c => c.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&")).join("|"), "g"), c => m[c]);
-exports.mrx = mrx;
+declare const mrx: (s: any, m: any) => any;
 /**
  * Creates a clean object with a forEach method.
  *
@@ -133,8 +120,7 @@ exports.mrx = mrx;
  * @exports obj
  * @returns {Object} New clean object.
  */
-const obj = (...o) => (O => (O.defineProperty(O.assign(O.create(null), ...o), "forEach", { value(c) { O.keys(this).map(k => c(this[k], k, this)); } })))(Object);
-exports.obj = obj;
+declare const obj: (...o: any[]) => any;
 /**
  * Add padding zeros to passed number.
  *
@@ -147,8 +133,7 @@ exports.obj = obj;
  * @exports pad
  * @returns {string} Padded number.
  */
-const pad = (n, l = 2) => (`${n}`.length < l) ? pad(`0${n}`, l) : `${n}`;
-exports.pad = pad;
+declare const pad: (n: any, l?: number) => any;
 /**
  * Random string generator (up to 10 characters).
  * Credit: https://github.com/Jacob-Friesen/obscurejs/blob/master/2015/oneLineRandomText.js
@@ -157,8 +142,7 @@ exports.pad = pad;
  * @exports rnd
  * @returns {string} A random string.
  */
-const rnd = (l = 10) => Math.random().toString(36).substr(2, l > 10 ? 10 : l < 1 ? 1 : l);
-exports.rnd = rnd;
+declare const rnd: (l?: number) => string;
 /**
  * Timestamp string hash generator (up to 8 characters).
  *
@@ -166,8 +150,7 @@ exports.rnd = rnd;
  * @exports tsh
  * @returns {string} A timestamp hash.
  */
-const tsh = (l = 8) => Date.now().toString(36).slice(0, l > 8 ? 8 : l < 1 ? 1 : l);
-exports.tsh = tsh;
+declare const tsh: (l?: number) => string;
 /**
  * Parse an object into a simple string in URL format for XHR.
  *
@@ -179,8 +162,7 @@ exports.tsh = tsh;
  * @exports url
  * @returns {string} URL formated string.
  */
-const url = o => Object.keys(o).map(p => Array.isArray(o[p]) ? o[p].map((r, q) => url({ [p + `[${q}]`]: r })).join("&") : (typeof o[p] === "object" && o[p] !== null) ? url(Object.keys(o[p]).reduce((r, q) => Object.assign(r, { [p + `[${q}]`]: o[p][q] }), {})) : p + "=" + encodeURIComponent(o[p])).join("&");
-exports.url = url;
+declare const url: (o: any) => any;
 /**
  * Alias for new XMLHttpRequest, with GET method by default.
  *
@@ -192,5 +174,5 @@ exports.url = url;
  * @exports xhr
  * @returns {XMLHttpRequest} The opened XML HTTP Request.
  */
-const xhr = (u, m = "GET") => { let x = new XMLHttpRequest; return x.open(m, u), x; };
-exports.xhr = xhr;
+declare const xhr: (u: any, m?: string) => XMLHttpRequest;
+export { ael, atr, cks, css, del, dom, get, mrx, obj, pad, rnd, tsh, url, xhr };

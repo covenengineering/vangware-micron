@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "declaration": true,
     "forceConsistentCasingInFileNames": true,
     "listEmittedFiles": true,
     "module": "commonjs",
