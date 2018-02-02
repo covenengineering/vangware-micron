@@ -3,7 +3,7 @@ dependencies:
 devDependencies:
   '@types/node': 9.4.0
   husky: 0.14.3
-  typescript: 2.6.2
+  typescript: 2.7.1
 packages:
   /@types/node/9.4.0:
     dev: true
@@ -640,12 +640,12 @@ packages:
       node: '>=4.0.0'
     resolution:
       integrity: sha512-sVACdAWcZkSU9x7AOmJo5TqE+GyNJknHaHsMrR6ZnhjVlVN9Yx6FjHrsKZ3BjIpPCT68zYesPWkakrNupwfOTQ==
-  /typescript/2.6.2:
+  /typescript/2.7.1:
     dev: true
     engines:
       node: '>=4.2.0'
     resolution:
-      integrity: sha1-PFtv1/beCRQmkCfwPAlGdY92c6Q=
+      integrity: sha512-bqB1yS6o9TNA9ZC/MJxM0FZzPnZdtHj0xWK/IZ5khzVqdpGul/R/EIiHRgFXlwTD7PSIaYVnGKq1QgMCu2mnqw==
   /typical/2.6.1:
     dev: false
     resolution:
@@ -747,4 +747,4 @@ specifiers:
   '@types/node': ^9.3.0
   husky: ^0.14.3
   jsdoc-to-markdown: ^4.0.1
-  typescript: ^2.6.2
+  typescript: ^2.7.1

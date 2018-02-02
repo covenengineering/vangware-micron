@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.0.1
+
+- Updated dependencies.
+
 ## 4.0.0
 
 - Added `CHANGELOG.md`.
