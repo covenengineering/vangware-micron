@@ -10,4 +10,4 @@
  * @exports get
  * @returns {HTMLElement[]} Array of elements.
  */
-export declare const get: (q: any, e?: Document) => {}[];
+export declare const get: (q: any, e?: Document) => any[];

@@ -1,6 +1,6 @@
 {
   "name": "micron.js",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Standalone helper arrow functions (ES6) in 1 line",
   "main": "./micron.js",
   "types": "./micron.d.ts",
@@ -44,9 +44,9 @@
   "homepage": "https://github.com/vangware/micron#readme",
   "devDependencies": {
     "@types/node": "^9.3.0",
-    "jsdoc-to-markdown": "^4.0.1",
     "husky": "^0.14.3",
-    "typescript": "^2.6.2"
+    "jsdoc-to-markdown": "^4.0.1",
+    "typescript": "^2.7.1"
   },
   "engines": {
     "node": "9.2.x",
