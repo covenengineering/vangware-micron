@@ -1,6 +1,6 @@
 {
   "name": "micron.js",
-  "version": "4.0.1",
+  "version": "4.1.0",
   "description": "Standalone helper arrow functions (ES6) in 1 line",
   "main": "./micron.js",
   "types": "./micron.d.ts",

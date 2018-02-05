@@ -1,6 +1,7 @@
 export { ael } from "./functions/ael";
 export { atr } from "./functions/atr";
 export { cks } from "./functions/cks";
+export { cry } from "./functions/cry";
 export { css } from "./functions/css";
 export { del } from "./functions/del";
 export { dom } from "./functions/dom";

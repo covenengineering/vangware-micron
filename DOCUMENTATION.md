@@ -10,6 +10,9 @@
 <dt><a href="#module_cks">cks</a> ⇒ <code>Object</code></dt>
 <dd><p>Get the current document cookies in object form.</p>
 </dd>
+<dt><a href="#module_cry">cry</a> ⇒ <code>function</code></dt>
+<dd><p>Curry the given function.</p>
+</dd>
 <dt><a href="#module_css">css</a> ⇒ <code>Array.&lt;HTMLElement&gt;</code></dt>
 <dd><p>Set several styles of an element or a group of elements.</p>
 </dd>
@@ -94,6 +97,27 @@ atr(get("#id"), {
 Get the current document cookies in object form.
 
 **Returns**: <code>Object</code> - The document cookies object.  
+<a name="module_cry"></a>
+
+## cry ⇒ <code>function</code>
+Curry the given function.
+
+**Returns**: <code>function</code> - Curried function.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| f | <code>function</code> | Function to be curried. |
+| A | <code>Array.&lt;any&gt;</code> | Arguments. |
+
+**Example**  
+```js
+const add = (a, b) => a + b;
+const curryedAdd = cry(add);
+const addTwo = curryedAdd(2);
+
+curryedAdd(1)(2); // Returns 3
+addTwo(3); // Returns 5
+```
 <a name="module_css"></a>
 
 ## css ⇒ <code>Array.&lt;HTMLElement&gt;</code>

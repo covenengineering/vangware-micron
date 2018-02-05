@@ -6,10 +6,11 @@
 
 Standalone helper arrow functions (ES6) in 1 line. Useful for code injection, bookmarklets, debugging, etc.
 
-```
+```plain
 ael: Listen to several events on an element or a group of elements.
 atr: Set several attributes of an element or a group of elements.
 cks: Get the current document cookies in object form.
+cry: Curry the given function.
 css: Set several styles of an element or a group of elements.
 del: Remove an element or a group of elements from the DOM.
 dom: Parse string into DOM.
