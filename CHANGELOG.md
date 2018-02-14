@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.1.1
+
+- Updated dependencies.
+- Updated `README.md`.
+
 ## 4.1.0
 
 - Added `cry`.

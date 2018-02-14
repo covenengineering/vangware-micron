@@ -1,14 +1,14 @@
 dependencies:
   jsdoc-to-markdown: 4.0.1
 devDependencies:
-  '@types/node': 9.4.0
+  '@types/node': 9.4.6
   husky: 0.14.3
   typescript: 2.7.1
 packages:
-  /@types/node/9.4.0:
+  /@types/node/9.4.6:
     dev: true
     resolution:
-      integrity: sha512-zkYho6/4wZyX6o9UQ8rd0ReEaiEYNNCqYFIAACe2Tf9DrYlgzWW27OigYHnnztnnZQwVRpwWmZKegFmDpinIsA==
+      integrity: sha512-CTUtLb6WqCCgp6P59QintjHWqzf4VL1uPA27bipLAPxFqrtK1gEYllePzTICGqQ8rYsCbpnsNypXjjDzGAAjEQ==
   /align-text/0.1.4:
     dependencies:
       kind-of: 3.2.2
@@ -744,7 +744,7 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 4
 shrinkwrapVersion: 3
 specifiers:
-  '@types/node': ^9.3.0
+  '@types/node': ^9.4.6
   husky: ^0.14.3
   jsdoc-to-markdown: ^4.0.1
   typescript: ^2.7.1
