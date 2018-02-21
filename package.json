@@ -1,7 +1,8 @@
 {
   "name": "micron.js",
-  "version": "4.1.1",
+  "version": "4.1.2",
   "description": "Standalone helper arrow functions (ES6) in 1 line",
+  "source": "./micron.ts",
   "main": "./micron.js",
   "types": "./micron.d.ts",
   "repository": {
@@ -31,12 +32,25 @@
     "regex",
     "simple",
     "standalone",
+    "typescript",
     "XMLHTTPRequest"
   ],
   "author": {
     "name": "Vangware",
     "url": "https://vangware.com"
   },
+  "contributors": [
+    {
+      "email": "hello@lukeshiru.me",
+      "name": "Lucas Ciruzzi",
+      "url": "https://lukeshiru.me"
+    },
+    {
+      "email": "jacob@jacobfriesen.com",
+      "name": "Jacob Friesen",
+      "url": "http://jacobfriesen.com"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/vangware/micron/issues"
@@ -46,10 +60,10 @@
     "@types/node": "^9.4.6",
     "husky": "^0.14.3",
     "jsdoc-to-markdown": "^4.0.1",
-    "typescript": "^2.7.1"
+    "typescript": "^2.7.2"
   },
   "engines": {
-    "node": "9.2.x",
+    "node": "9.5.x",
     "npm": "5.6.x"
   }
 }

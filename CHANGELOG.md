@@ -1,5 +1,12 @@
 # Changelog
 
+## 4.1.2
+
+- Updated dependencies.
+- Added badge for npm version on `README.md`.
+- Added contributors field to `package.json`.
+- Added credit for [@Jacob-Friesen](https://github.com/Jacob-Friesen) in `contributors`.
+
 ## 4.1.1
 
 - Updated dependencies.
