@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
- * Alias for querySelectorAll, but returning an array instead of a nodeList.
+ * Alias for querySelectorAll in an array.
  *
  * @example
  * // <a id="id">Link</a>

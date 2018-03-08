@@ -10,6 +10,9 @@
 <dt><a href="#module_cks">cks</a> ⇒ <code>Object</code></dt>
 <dd><p>Get the current document cookies in object form.</p>
 </dd>
+<dt><a href="#module_cne">cne</a> ⇒ <code>HTMLElement</code></dt>
+<dd><p>Creates a new element.</p>
+</dd>
 <dt><a href="#module_cry">cry</a> ⇒ <code>function</code></dt>
 <dd><p>Curry the given function.</p>
 </dd>
@@ -23,7 +26,7 @@
 <dd><p>Parse string into DOM.</p>
 </dd>
 <dt><a href="#module_get">get</a> ⇒ <code>Array.&lt;HTMLElement&gt;</code></dt>
-<dd><p>Alias for querySelectorAll, but returning an array instead of a nodeList.</p>
+<dd><p>Alias for querySelectorAll in an array.</p>
 </dd>
 <dt><a href="#module_mrx">mrx</a> ⇒ <code>string</code></dt>
 <dd><p>Takes a string and an object and makes a regex map replace</p>
@@ -97,6 +100,34 @@ atr(get("#id"), {
 Get the current document cookies in object form.
 
 **Returns**: <code>Object</code> - The document cookies object.  
+**Example**  
+```js
+cks(); // If document.cookie is "a=1; b=2", this returns { a: 1, b: 2 }
+cks(); // If document.cookie is empty, this returns {}
+```
+<a name="module_cne"></a>
+
+## cne ⇒ <code>HTMLElement</code>
+Creates a new element.
+
+**Returns**: <code>HTMLElement</code> - New element with properties set.  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| t | <code>string</code> |  | Element tag. |
+| [P] | <code>any</code> | <code>{}</code> | Element properties. |
+
+**Example**  
+```js
+cne("div"); // Returns <div></div>
+cne("div", {
+  width: 100,
+  height: 100,
+  style: {
+    backgroundColor: "#000"
+  }
+}); // Returns <div width="100" height="100" style="background-color:#000"></div>
+```
 <a name="module_cry"></a>
 
 ## cry ⇒ <code>function</code>
@@ -172,7 +203,7 @@ dom("<a>Hello world</a>"); // Returns document object with that link on the body
 <a name="module_get"></a>
 
 ## get ⇒ <code>Array.&lt;HTMLElement&gt;</code>
-Alias for querySelectorAll, but returning an array instead of a nodeList.
+Alias for querySelectorAll in an array.
 
 **Returns**: <code>Array.&lt;HTMLElement&gt;</code> - Array of elements.  
 
@@ -246,6 +277,11 @@ Credit: https://github.com/Jacob-Friesen/obscurejs/blob/master/2015/oneLineRando
 | --- | --- | --- |
 | l | <code>number</code> | Length of the random string. |
 
+**Example**  
+```js
+rnd(); // Random string of 10 characters, like: "oosjghfusv".
+rnd(5); // Random string of 5 characters, like: "fz5ik".
+```
 <a name="module_tsh"></a>
 
 ## tsh ⇒ <code>string</code>
@@ -257,6 +293,11 @@ Timestamp string hash generator (up to 8 characters).
 | --- | --- | --- |
 | l | <code>number</code> | Length of the random string (8 max). |
 
+**Example**  
+```js
+tsh(); // Timestamp hash of 8 characters, like: "km5ztiej".
+tsh(4); // Timestamp hash of 4 characters, like: "ytbz".
+```
 <a name="module_url"></a>
 
 ## url ⇒ <code>string</code>
