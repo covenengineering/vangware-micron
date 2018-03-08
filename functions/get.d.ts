@@ -1,5 +1,5 @@
 /**
- * Alias for querySelectorAll, but returning an array instead of a nodeList.
+ * Alias for querySelectorAll in an array.
  *
  * @example
  * // <a id="id">Link</a>
