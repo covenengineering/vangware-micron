@@ -1,5 +1,9 @@
 # Changelog
 
+## 5.0.1
+
+- Oups! Fixed missing reference to `cne` on `micron.ts`.
+
 ## 5.0.0
 
 - Added `cne` (Creates a new element).
