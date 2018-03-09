@@ -1,16 +1,17 @@
 {
-  "name": "micron.js",
-  "version": "6.0.0",
+  "name": "@vangware/micron",
+  "version": "7.0.0",
   "description": "Standalone helper arrow functions (ES6) in 1 line",
-  "source": "./micron.ts",
-  "main": "./micron.js",
-  "types": "./micron.d.ts",
+  "source": "./src",
+  "main": "./dist",
+  "types": "./dist",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vangware/micron.git"
   },
   "scripts": {
-    "precommit": "tsc && jsdoc2md functions/*.js > DOCUMENTATION.md"
+    "precommit": "tsc && jsdoc2md dist/*.js > DOCUMENTATION.md",
+    "clean": "rimraf ./dist"
   },
   "keywords": [
     "ajax",
@@ -60,6 +61,7 @@
     "@types/node": "^9.4.6",
     "husky": "^0.14.3",
     "jsdoc-to-markdown": "^4.0.1",
+    "rimraf": "^2.6.2",
     "typescript": "^2.7.2"
   },
   "engines": {

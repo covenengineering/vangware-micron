@@ -2,6 +2,7 @@ devDependencies:
   '@types/node': 9.4.6
   husky: 0.14.3
   jsdoc-to-markdown: 4.0.1
+  rimraf: 2.6.2
   typescript: 2.7.2
 packages:
   /@types/node/9.4.6:
@@ -76,13 +77,13 @@ packages:
     dev: true
     resolution:
       integrity: sha512-MKiLiV+I1AA596t9w1sQJ8jkiSr5+ZKi0WKrYGUn6d1Fx+Ij4tIj+m2WMQSGczs5jZVxV339chE8iwk6F64wjA==
-  /brace-expansion/1.1.8:
+  /brace-expansion/1.1.11:
     dependencies:
       balanced-match: 1.0.0
       concat-map: 0.0.1
     dev: true
     resolution:
-      integrity: sha1-wHshHHyVLsH479Uad+8NHTmQopI=
+      integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==
   /cache-point/0.4.1:
     dependencies:
       array-back: 2.0.0
@@ -436,7 +437,7 @@ packages:
       integrity: sha512-k4NaW+vS7ytQn6MgJn3fYpQt20/mOgYM5Ft9BYMfQJDz2QT6yEeS9XJ8k2Nw8JTeWK/znPPW2n3UJGzyYEiMoA==
   /minimatch/3.0.4:
     dependencies:
-      brace-expansion: 1.1.8
+      brace-expansion: 1.1.11
     dev: true
     resolution:
       integrity: sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==
@@ -541,6 +542,12 @@ packages:
     optional: true
     resolution:
       integrity: sha1-YTObci/mo1FWiSENJOFMlhSGE+8=
+  /rimraf/2.6.2:
+    dependencies:
+      glob: 7.1.2
+    dev: true
+    resolution:
+      integrity: sha512-lreewLK/BlghmxtfH36YYVg1i8IAce4TI7oao75I1g245+6BctqTVQiBP3YUJ9C6DQOXJmkYR9X9fCLtCOJc5w==
   /sort-array/2.0.0:
     dependencies:
       array-back: 1.0.4
@@ -746,4 +753,5 @@ specifiers:
   '@types/node': ^9.4.6
   husky: ^0.14.3
   jsdoc-to-markdown: ^4.0.1
+  rimraf: ^2.6.2
   typescript: ^2.7.2
