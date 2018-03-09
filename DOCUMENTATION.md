@@ -7,7 +7,7 @@
 <dt><a href="#module_atr">atr</a> ⇒ <code>Array.&lt;HTMLElement&gt;</code></dt>
 <dd><p>Set several attributes of an element or a group of elements.</p>
 </dd>
-<dt><a href="#module_cks">cks</a> ⇒ <code>Object</code></dt>
+<dt><a href="#module_cks">cks</a> ⇒ <code>Object</code> | <code>Object.&lt;string, string&gt;</code></dt>
 <dd><p>Get the current document cookies in object form.</p>
 </dd>
 <dt><a href="#module_cne">cne</a> ⇒ <code>HTMLElement</code></dt>
@@ -32,7 +32,7 @@
 <dd><p>Takes a string and an object and makes a regex map replace</p>
 </dd>
 <dt><a href="#module_obj">obj</a> ⇒ <code>Object</code></dt>
-<dd><p>Creates a clean object with a forEach method.</p>
+<dd><p>Creates a clean object.</p>
 </dd>
 <dt><a href="#module_pad">pad</a> ⇒ <code>string</code></dt>
 <dd><p>Add padding zeros to passed number.</p>
@@ -62,7 +62,7 @@ Listen to several events on an element or a group of elements.
 | Param | Type | Description |
 | --- | --- | --- |
 | E | <code>HTMLElement</code> \| <code>Array.&lt;HTMLElement&gt;</code> | DOM Element or Array of DOM Elements with event. |
-| V | <code>Object</code> | List of events and callbacks in Object format. |
+| V | <code>Object.&lt;string, EventListener&gt;</code> | List of events and callbacks in Object format. |
 
 **Example**  
 ```js
@@ -84,7 +84,7 @@ Set several attributes of an element or a group of elements.
 | Param | Type | Description |
 | --- | --- | --- |
 | E | <code>HTMLElement</code> \| <code>Array.&lt;HTMLElement&gt;</code> | DOM Element or Array of DOM Elements with event. |
-| A | <code>Object</code> | List of attributes in Object format. |
+| A | <code>Object.&lt;string, any&gt;</code> | List of attributes in Object format. |
 
 **Example**  
 ```js
@@ -96,14 +96,14 @@ atr(get("#id"), {
 ```
 <a name="module_cks"></a>
 
-## cks ⇒ <code>Object</code>
+## cks ⇒ <code>Object</code> \| <code>Object.&lt;string, string&gt;</code>
 Get the current document cookies in object form.
 
-**Returns**: <code>Object</code> - The document cookies object.  
+**Returns**: <code>Object</code> \| <code>Object.&lt;string, string&gt;</code> - The document cookies object.  
 **Example**  
 ```js
-cks(); // If document.cookie is "a=1; b=2", this returns { a: 1, b: 2 }
-cks(); // If document.cookie is empty, this returns {}
+cks(); // If document.cookie is "a=1; b=2", returns { a: 1, b: 2 }
+cks(); // If document.cookie is empty, returns {}
 ```
 <a name="module_cne"></a>
 
@@ -115,7 +115,7 @@ Creates a new element.
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | t | <code>string</code> |  | Element tag. |
-| [P] | <code>any</code> | <code>{}</code> | Element properties. |
+| [P] | <code>Object.&lt;string, any&gt;</code> | <code>{}</code> | Element properties. |
 
 **Example**  
 ```js
@@ -138,15 +138,15 @@ Curry the given function.
 | Param | Type | Description |
 | --- | --- | --- |
 | f | <code>function</code> | Function to be curried. |
-| A | <code>Array.&lt;any&gt;</code> | Arguments. |
+| ...A | <code>any</code> | Arguments. |
 
 **Example**  
 ```js
 const add = (a, b) => a + b;
-const curryedAdd = cry(add);
-const addTwo = curryedAdd(2);
+const curriedAdd = cry(add);
+const addTwo = curriedAdd(2);
 
-curryedAdd(1)(2); // Returns 3
+curriedAdd(1)(2); // Returns 3
 addTwo(3); // Returns 5
 ```
 <a name="module_css"></a>
@@ -159,7 +159,7 @@ Set several styles of an element or a group of elements.
 | Param | Type | Description |
 | --- | --- | --- |
 | E | <code>HTMLElement</code> \| <code>Array.&lt;HTMLElement&gt;</code> | DOM Element or Array of DOM Elements to set styles. |
-| S | <code>Object</code> | List of styles in Object format. |
+| S | <code>Object.&lt;string, any&gt;</code> | List of styles in Object format. |
 
 **Example**  
 ```js
@@ -194,7 +194,7 @@ Parse string into DOM.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| S | <code>string</code> | String to be parsed. |
+| s | <code>string</code> | String to be parsed. |
 
 **Example**  
 ```js
@@ -210,7 +210,7 @@ Alias for querySelectorAll in an array.
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | q | <code>string</code> |  | CSS Query. |
-| [e] | <code>HTMLElement</code> | <code>document</code> | Base element. |
+| [e] | <code>HTMLElement</code> \| <code>Document</code> | <code>document</code> | Base element. |
 
 **Example**  
 ```js
@@ -227,7 +227,7 @@ Takes a string and an object and makes a regex map replace
 | Param | Type | Description |
 | --- | --- | --- |
 | s | <code>string</code> | String. |
-| m | <code>Object</code> | Map with format { "string to be replaced": "replacing string" }. |
+| m | <code>Object.&lt;string, string&gt;</code> | Map with format { "target": "replacing string" }. |
 
 **Example**  
 ```js
@@ -236,7 +236,7 @@ mrx("abc", {"a":1,"b":2,"c":3}); // Returns "123"
 <a name="module_obj"></a>
 
 ## obj ⇒ <code>Object</code>
-Creates a clean object with a forEach method.
+Creates a clean object.
 
 **Returns**: <code>Object</code> - New clean object.  
 
@@ -257,7 +257,7 @@ Add padding zeros to passed number.
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| n | <code>number</code> |  | Number to be padded. |
+| n | <code>number</code> \| <code>string</code> |  | Number to be padded. |
 | [l] | <code>number</code> | <code>2</code> | Total length of resulting number. |
 
 **Example**  

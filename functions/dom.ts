@@ -1,11 +1,16 @@
+/* TypeScript patch (It doesn't infer from JSDocs). */
+let dom:(s:string)=>Document;
+
 /**
  * Parse string into DOM.
  *
- * @example
- * dom("<a>Hello world</a>"); // Returns document object with that link on the body
- *
- * @param {string} S String to be parsed.
+ * @param {string} s String to be parsed.
  * @exports dom
  * @returns {Document} Parsed DOM.
+ *
+ * @example
+ * dom("<a>Hello world</a>"); // Returns document object with that link on the body
  */
-export const dom=S=>(new DOMParser).parseFromString(S,"text/html");
+dom=s=>(new DOMParser).parseFromString(s,"text/html");
+
+export { dom };
