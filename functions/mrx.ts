@@ -1,12 +1,17 @@
+/* TypeScript patch (It doesn't infer from JSDocs). */
+let mrx:(s:string,m:{[target:string]:string})=>string;
+
 /**
  * Takes a string and an object and makes a regex map replace
  *
- * @example
- * mrx("abc", {"a":1,"b":2,"c":3}); // Returns "123"
- *
  * @param  {string} s String.
- * @param  {Object} m Map with format { "string to be replaced": "replacing string" }.
+ * @param  {Object.<string,string>} m Map with format { "target": "replacing string" }.
  * @exports mrx
  * @returns {string} String with replaced elements from map.
+ *
+ * @example
+ * mrx("abc", {"a":1,"b":2,"c":3}); // Returns "123"
  */
-export const mrx=(s,m)=>s.replace(new RegExp(Object.keys(m).map(c=>c.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g,"\\$&")).join("|"),"g"),c=>m[c]);
+mrx=(s,m)=>s.replace(new RegExp(Object.keys(m).map(c=>c.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g,"\\$&")).join("|"),"g"),c=>m[c]);
+
+export { mrx };

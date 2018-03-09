@@ -1,5 +1,15 @@
 # Changelog
 
+## 6.0.0
+
+- Better typing support.
+- Better documentation.
+- Removed `forEach` from `obj` output clean object.
+
+## 5.0.2
+
+- Better documentation.
+
 ## 5.0.1
 
 - Oups! Fixed missing reference to `cne` on `micron.ts`.

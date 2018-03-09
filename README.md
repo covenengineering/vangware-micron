@@ -18,7 +18,7 @@ del: Remove an element or a group of elements from the DOM.
 dom: Parse string into DOM.
 get: Alias for querySelectorAll in an array.
 mrx: Takes a string and an object and makes a regex map replace.
-obj: Creates a clean object with a forEach method.
+obj: Creates a clean object.
 pad: Add padding zeros to passed number.
 rnd: Random string generator (up to 10 characters).
 tsh: Timestamp string hash generator (up to 8 characters).
