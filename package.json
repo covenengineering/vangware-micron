@@ -1,6 +1,6 @@
 {
   "name": "@vangware/micron",
-  "version": "7.0.0",
+  "version": "7.0.1",
   "description": "Standalone helper arrow functions (ES6) in 1 line",
   "source": "./src",
   "main": "./dist",
