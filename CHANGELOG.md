@@ -1,5 +1,12 @@
 # Changelog
 
+## 7.0.0
+
+- More breaking changes!
+- Yet another big change in the structure.
+- Moved to scope @vangware.
+- Deprecated old micron.js.
+
 ## 6.0.0
 
 - Better typing support.

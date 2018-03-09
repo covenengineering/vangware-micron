@@ -1,8 +1,0 @@
-{
-  "files.exclude": {
-    "functions/*.d.ts": true,
-    "functions/*.js": true,
-    "micron.d.ts": true,
-    "micron.js": true
-  }
-}

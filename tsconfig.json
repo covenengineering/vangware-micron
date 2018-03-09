@@ -9,7 +9,8 @@
     "noEmitOnError": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "pretty": true,
+    "outDir": "dist",
+    "pretty": false,
     "strict": true,
     "target": "es2015"
   }
