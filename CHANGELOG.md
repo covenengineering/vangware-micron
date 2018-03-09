@@ -1,5 +1,9 @@
 # Changelog
 
+## 7.0.1
+
+- Updated assets to point to new NPM url.
+
 ## 7.0.0
 
 - More breaking changes!
