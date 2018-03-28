@@ -1,14 +1,14 @@
 devDependencies:
-  '@types/node': 9.4.7
+  '@types/node': 9.6.0
   husky: 0.14.3
   jsdoc-to-markdown: 4.0.1
   rimraf: 2.6.2
-  typescript: 2.7.2
+  typescript: 2.8.1
 packages:
-  /@types/node/9.4.7:
+  /@types/node/9.6.0:
     dev: true
     resolution:
-      integrity: sha512-4Ba90mWNx8ddbafuyGGwjkZMigi+AWfYLSDCpovwsE63ia8w93r3oJ8PIAQc3y8U+XHcnMOHPIzNe3o438Ywcw==
+      integrity: sha512-h3YZbOq2+ZoDFI1z8Zx0Ck/xRWkOESVaLdgLdd/c25mMQ1Y2CAkILu9ny5A15S5f32gGcQdaUIZ2jzYr8D7IFg==
   /align-text/0.1.4:
     dependencies:
       kind-of: 3.2.2
@@ -646,12 +646,12 @@ packages:
       node: '>=4.0.0'
     resolution:
       integrity: sha512-sVACdAWcZkSU9x7AOmJo5TqE+GyNJknHaHsMrR6ZnhjVlVN9Yx6FjHrsKZ3BjIpPCT68zYesPWkakrNupwfOTQ==
-  /typescript/2.7.2:
+  /typescript/2.8.1:
     dev: true
     engines:
       node: '>=4.2.0'
     resolution:
-      integrity: sha512-p5TCYZDAO0m4G344hD+wx/LATebLWZNkkh2asWUFqSsD2OrDNhbAHuSjobrmsUmdzjJjEeZVU9g1h3O6vpstnw==
+      integrity: sha512-Ao/f6d/4EPLq0YwzsQz8iXflezpTkQzqAyenTiw4kCUGr1uPiFLC3+fZ+gMZz6eeI/qdRUqvC+HxIJzUAzEFdg==
   /typical/2.6.1:
     dev: true
     resolution:
@@ -750,8 +750,8 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 4
 shrinkwrapVersion: 3
 specifiers:
-  '@types/node': ^9.4.7
+  '@types/node': ^9.6.0
   husky: ^0.14.3
   jsdoc-to-markdown: ^4.0.1
   rimraf: ^2.6.2
-  typescript: ^2.7.2
+  typescript: ^2.8.1
