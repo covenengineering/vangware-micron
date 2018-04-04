@@ -1,6 +1,6 @@
 {
   "name": "@vangware/micron",
-  "version": "7.0.4",
+  "version": "7.0.5",
   "description": "Standalone helper arrow functions (ES6) in 1 line",
   "source": "./src",
   "main": "./dist",
@@ -11,7 +11,8 @@
   },
   "scripts": {
     "precommit": "tsc && jsdoc2md dist/*.js > DOCUMENTATION.md",
-    "clean": "rimraf ./dist"
+    "clean": "rimraf ./dist",
+    "test": "echo 'No test yet, sorry'"
   },
   "keywords": [
     "ajax",

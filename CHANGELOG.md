@@ -1,5 +1,9 @@
 # Changelog
 
+## 7.0.5
+
+- Fixes for Travis.
+
 ## 7.0.4
 
 - Updated dependencies.
