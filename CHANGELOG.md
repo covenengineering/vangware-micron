@@ -1,5 +1,10 @@
 # Changelog
 
+## 7.0.4
+
+- Updated dependencies.
+- Added `yarn` and `npm` lock files.
+
 ## 7.0.3
 
 - Updated dependencies.
