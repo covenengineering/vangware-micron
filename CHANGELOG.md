@@ -1,5 +1,10 @@
 # Changelog
 
+## 7.1.0
+
+- Updated dependencies.
+- Updated pad function.
+
 ## 7.0.5
 
 - Fixes for Travis.
