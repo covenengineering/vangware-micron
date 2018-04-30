@@ -12,6 +12,6 @@
     "outDir": "dist",
     "pretty": false,
     "strict": true,
-    "target": "es2015"
+    "target": "es2017"
   }
 }

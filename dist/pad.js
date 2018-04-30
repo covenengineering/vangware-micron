@@ -12,4 +12,4 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * pad(1); // Returns "01"
  * pad(2, 5); // Returns "00002"
  */
-exports.pad = (n, l = 2) => (`${n}`.length < l) ? exports.pad(`0${n}`, l) : `${n}`;
+exports.pad = (n, l = 2) => `${n}`.padStart(l, "0");

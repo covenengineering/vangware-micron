@@ -10,4 +10,4 @@
  * pad(1); // Returns "01"
  * pad(2, 5); // Returns "00002"
  */
-export const pad=(n:number|string,l:number=2):string=>(`${n}`.length<l)?pad(`0${n}`,l):`${n}`;
+export const pad=(n:number|string,l:number=2):string=>`${n}`.padStart(l,"0");
