@@ -1,5 +1,9 @@
 # Changelog
 
+## 7.1.2
+
+- Updated dependencies.
+
 ## 7.1.1
 
 - Travis script patched.
