@@ -2,7 +2,7 @@ devDependencies:
   husky: 0.14.3
   jsdoc-to-markdown: 4.0.1
   rimraf: 2.6.2
-  typescript: 2.8.3
+  typescript: 2.9.1
 packages:
   /align-text/0.1.4:
     dependencies:
@@ -83,7 +83,7 @@ packages:
     dependencies:
       array-back: 2.0.0
       fs-then-native: 2.0.0
-      mkdirp2: 1.0.3
+      mkdirp2: 1.0.4
     dev: true
     engines:
       node: '>=4.0.0'
@@ -114,10 +114,10 @@ packages:
     optional: true
     resolution:
       integrity: sha1-qg0yYptu6XIgBBHL1EYckHvCt60=
-  /ci-info/1.1.2:
+  /ci-info/1.1.3:
     dev: true
     resolution:
-      integrity: sha512-uTGIPNx/nSpBdsF6xnseRXLLtfr9VLqkz8ZqHXr3Y7b6SftyRxBGjwMtJj1OhNbmlc1wZzLNAlAcvyIiE8a6ZA==
+      integrity: sha512-SK/846h/Rcy8q9Z9CAwGBLfCJ6EkjJWdpelWDufQpqVDYq2Wnnv8zlSO6AMQap02jvhVruKKpEtQOufo3pFhLg==
   /cliui/2.1.0:
     dependencies:
       center-align: 0.1.3
@@ -136,7 +136,7 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-0y0rBgoX8IzIjBAUnO73SEtSb4Mhk3IoceWJq5zZSxb9mWORhWH8xLYo4EDSOE1jRBk1LhmfjqWFFt10h/+MEA==
-  /command-line-args/5.0.1:
+  /command-line-args/5.0.2:
     dependencies:
       argv-tools: 0.1.1
       array-back: 2.0.0
@@ -147,12 +147,12 @@ packages:
     engines:
       node: '>=4.0.0'
     resolution:
-      integrity: sha512-gRJDcIjFSzMcmG/GrJlgL0wWoAxr11mVzCq32bjka0endupm9meLwvoJUKc4HDeFiEIB2X3GvNrhF5cKO4Bd4A==
+      integrity: sha512-/qPcbL8zpqg53x4rAaqMFlRV4opN3pbla7I7k9x8kyOBMQoGT6WltjN6sXZuxOXw6DgdK7Ad+ijYS5gjcr7vlA==
   /command-line-tool/0.8.0:
     dependencies:
       ansi-escape-sequences: 4.0.0
       array-back: 2.0.0
-      command-line-args: 5.0.1
+      command-line-args: 5.0.2
       command-line-usage: 4.1.0
       typical: 2.6.1
     dev: true
@@ -164,7 +164,7 @@ packages:
     dependencies:
       ansi-escape-sequences: 4.0.0
       array-back: 2.0.0
-      table-layout: 0.4.2
+      table-layout: 0.4.4
       typical: 2.6.1
     dev: true
     engines:
@@ -194,21 +194,20 @@ packages:
     optional: true
     resolution:
       integrity: sha1-9lNNFRSCabIDUue+4m9QH5oZEpA=
-  /deep-extend/0.5.0:
+  /deep-extend/0.6.0:
     dev: true
     engines:
-      iojs: '>=1.0.0'
-      node: '>=0.10.0'
+      node: '>=4.0.0'
     resolution:
-      integrity: sha1-bvSgmwX5iw41jW2T1Mo8rsZnKAM=
-  /dmd/3.0.10:
+      integrity: sha512-LOHxIOaPYdHlJRtCQfDIVZtfw/ufM8+rVj649RIHzcm/vGwQRXFt6OPqIFWsm2XEMrNIEtWR64sY1LEKD2vAOA==
+  /dmd/3.0.12:
     dependencies:
       array-back: 2.0.0
       cache-point: 0.4.1
       common-sequence: 1.0.2
-      file-set: 1.1.1
+      file-set: 2.0.0
       handlebars: 4.0.11
-      marked: 0.3.12
+      marked: 0.3.19
       object-get: 2.1.0
       reduce-flatten: 1.0.1
       reduce-unique: 1.0.0
@@ -219,20 +218,20 @@ packages:
     engines:
       node: '>=4.0.0'
     resolution:
-      integrity: sha512-+tRZIFV9fII538XFZSoRP1abtIy55RYa4waGvtKB36LD97NRorWsYT3V3HEURmnXpA4eGIFQph1E2f+51hWrTg==
+      integrity: sha512-79w644JdsB2TthYpVl2bDurX7i9Abaegg2E7X46Ajc135aASTMXxrHzJ9mOa5X5nbmnXwlBYiF68K+1baX+BzQ==
   /escape-string-regexp/1.0.5:
     dev: true
     engines:
       node: '>=0.8.0'
     resolution:
       integrity: sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
-  /file-set/1.1.1:
+  /file-set/2.0.0:
     dependencies:
-      array-back: 1.0.4
+      array-back: 2.0.0
       glob: 7.1.2
     dev: true
     resolution:
-      integrity: sha1-0+xwwIDsjxjyBLod4QZ4DJBWkms=
+      integrity: sha512-cCWXfw+nrYoIoUVmEF7Xsw91lGWuObtSnTEZ7AmdvZou1A/6Xx237HfxdQyC/ayKRvQSMbNOBwg62OjN5JxbXw==
   /find-replace/2.0.1:
     dependencies:
       array-back: 2.0.0
@@ -310,7 +309,7 @@ packages:
       integrity: sha512-NcdALwpXkTm5Zvvbk7owOUSvVvBKDgKP5/ewfXEznmQFfs4ZRmanOeKBTjRVjka3QFoN6XJ+9F3USqfHqTaU5w==
   /is-ci/1.1.0:
     dependencies:
-      ci-info: 1.1.2
+      ci-info: 1.1.3
     dev: true
     resolution:
       integrity: sha512-c7TnwxLePuqIlxHgr7xtxzycJPegNHFuIrBkwbf8hc58//+Op1CqFkyS+xnIMkwn9UsJIwc174BIjkyBmSpjKg==
@@ -320,12 +319,12 @@ packages:
     dev: true
     resolution:
       integrity: sha1-P7YOqgicVED5MZ9RdgzNB+JJlzM=
-  /jsdoc-api/4.0.1:
+  /jsdoc-api/4.0.3:
     dependencies:
       array-back: 2.0.0
       cache-point: 0.4.1
       collect-all: 1.0.3
-      file-set: 1.1.1
+      file-set: 2.0.0
       fs-then-native: 2.0.0
       jsdoc: 3.5.5
       object-to-spawn-args: 1.1.1
@@ -335,7 +334,7 @@ packages:
     engines:
       node: '>=4.0.0'
     resolution:
-      integrity: sha512-qCzHGQxfd9toMRjQft9E44Y40zWDPgf13pt3n+xExk8+wmVd7aueW6cTSQOHyjQG1v07INunQD8AcCAPxhZVmw==
+      integrity: sha512-dfYq9JgB+XahY0XfSEw93PmXmocjwYcvJ5aMuQUJ/OdDRGWamf2SSOk3W06Bsj8qdjp/UdefzqpP/mpwsvHuvA==
   /jsdoc-parse/3.0.1:
     dependencies:
       array-back: 2.0.0
@@ -354,8 +353,8 @@ packages:
       array-back: 2.0.0
       command-line-tool: 0.8.0
       config-master: 3.1.0
-      dmd: 3.0.10
-      jsdoc-api: 4.0.1
+      dmd: 3.0.12
+      jsdoc-api: 4.0.3
       jsdoc-parse: 3.0.1
       walk-back: 3.0.0
     dev: true
@@ -371,7 +370,7 @@ packages:
       escape-string-regexp: 1.0.5
       js2xmlparser: 3.0.0
       klaw: 2.0.0
-      marked: 0.3.12
+      marked: 0.3.19
       mkdirp: 0.5.1
       requizzle: 0.2.1
       strip-json-comments: 2.0.1
@@ -427,10 +426,12 @@ packages:
     optional: true
     resolution:
       integrity: sha1-MKCy2jj3N3DoKUoNIuZiXtd9AJc=
-  /marked/0.3.12:
+  /marked/0.3.19:
     dev: true
+    engines:
+      node: '>=0.10.0'
     resolution:
-      integrity: sha512-k4NaW+vS7ytQn6MgJn3fYpQt20/mOgYM5Ft9BYMfQJDz2QT6yEeS9XJ8k2Nw8JTeWK/znPPW2n3UJGzyYEiMoA==
+      integrity: sha512-ea2eGWOqNxPcXv8dyERdSr/6FmzvWwzjMxpfGB/sbMccXoct+xY+YukPD+QTUZwyvK7BZwcr4m21WBOW41pAkg==
   /minimatch/3.0.4:
     dependencies:
       brace-expansion: 1.1.11
@@ -451,10 +452,10 @@ packages:
     dev: true
     resolution:
       integrity: sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=
-  /mkdirp2/1.0.3:
+  /mkdirp2/1.0.4:
     dev: true
     resolution:
-      integrity: sha1-zI3YJl8fBuLY9bELblL04FC+0hs=
+      integrity: sha512-Q2PKB4ZR4UPtjLl76JfzlgSCUZhSV1AXQgAZa1qt5RiaALFjP/CDrGvFBrOz7Ck6McPcwMAxTsJvWOUjOU8XMw==
   /normalize-path/1.0.0:
     dev: true
     engines:
@@ -595,10 +596,10 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-PFMZQukIwml8DsNEhYwobHygpgo=
-  /table-layout/0.4.2:
+  /table-layout/0.4.4:
     dependencies:
       array-back: 2.0.0
-      deep-extend: 0.5.0
+      deep-extend: 0.6.0
       lodash.padend: 4.6.1
       typical: 2.6.1
       wordwrapjs: 3.0.0
@@ -606,7 +607,7 @@ packages:
     engines:
       node: '>=4.0.0'
     resolution:
-      integrity: sha512-tygyl5+eSHj4chpq5Zfy6cpc7MOUBClAW9ozghFH7hg9bAUzShOYn+/vUzTRkKOSLJWKfgYtP2tAU2c0oAD8eg==
+      integrity: sha512-uNaR3SRMJwfdp9OUr36eyEi6LLsbcTqTO/hfTsNviKsNeyMBPICJCC7QXRF3+07bAP6FRwA8rczJPBqXDc0CkQ==
   /taffydb/2.6.2:
     dev: true
     resolution:
@@ -642,12 +643,12 @@ packages:
       node: '>=4.0.0'
     resolution:
       integrity: sha512-sVACdAWcZkSU9x7AOmJo5TqE+GyNJknHaHsMrR6ZnhjVlVN9Yx6FjHrsKZ3BjIpPCT68zYesPWkakrNupwfOTQ==
-  /typescript/2.8.3:
+  /typescript/2.9.1:
     dev: true
     engines:
       node: '>=4.2.0'
     resolution:
-      integrity: sha512-K7g15Bb6Ra4lKf7Iq2l/I5/En+hLIHmxWZGq3D4DIRNFxMNV6j2SHSvDOqs2tGd4UvD/fJvrwopzQXjLrT7Itw==
+      integrity: sha512-h6pM2f/GDchCFlldnriOhs1QHuwbnmj6/v7499eMHqPeW4V2G0elua2eIc2nu8v2NdHV0Gm+tzX83Hr6nUFjQA==
   /typical/2.6.1:
     dev: true
     resolution:
@@ -743,10 +744,10 @@ packages:
     resolution:
       integrity: sha1-9+572FfdfB0tOMDnTvvWgdFDH9E=
 registry: 'https://registry.npmjs.org/'
-shrinkwrapMinorVersion: 5
+shrinkwrapMinorVersion: 7
 shrinkwrapVersion: 3
 specifiers:
   husky: ^0.14.3
   jsdoc-to-markdown: ^4.0.1
   rimraf: ^2.6.2
-  typescript: ^2.8.3
+  typescript: ^2.9.1
