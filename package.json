@@ -1,6 +1,6 @@
 {
   "name": "@vangware/micron",
-  "version": "7.1.2",
+  "version": "7.1.3",
   "description": "Standalone helper arrow functions (ES6) in 1 line",
   "source": "./src",
   "main": "./dist",
@@ -62,7 +62,7 @@
     "husky": "^0.14.3",
     "jsdoc-to-markdown": "^4.0.1",
     "rimraf": "^2.6.2",
-    "typescript": "^2.9.1"
+    "typescript": "^2.9.2"
   },
   "engines": {
     "node": "10.x.x",
