@@ -1,5 +1,14 @@
 # Changelog
 
+## 8.0.0
+
+- Updated structure yet again to pure JS (Typing with JSDocs).
+- Updated dependencies.
+- Updated node version.
+- `package.json` fixed with `fixpack`.
+- Changed `cne` and `dom` to return arrays for consistency (everything can be mapped, reduced, etc.).
+- `micron` now is compatible with `ESM`, so can be loaded directly in the browser.
+
 ## 7.1.3
 
 - Updated dependencies.

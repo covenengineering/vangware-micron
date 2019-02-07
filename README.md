@@ -1,11 +1,11 @@
 # micron
 
-[![[Micron logo]](https://cdn.rawgit.com/vangware/micron/master/logo.svg)](https://vangware.com)
+[![\[Micron logo\]](https://cdn.rawgit.com/vangware/micron/master/logo.svg)](https://vangware.com)
 
-[![[NPM Version]](https://img.shields.io/npm/v/@vangware/micron.svg?style=flat-square)](https://npm.im/@vangware/micron)
-[![[Build Status]](https://img.shields.io/travis/vangware/micron.svg?style=flat-square)](https://travis-ci.org/vangware/micron)
+[![\[NPM Version\]](https://img.shields.io/npm/v/@vangware/micron.svg?style=flat-square)](https://npm.im/@vangware/micron)
+[![\[Build Status\]](https://img.shields.io/travis/vangware/micron.svg?style=flat-square)](https://travis-ci.org/vangware/micron)
 
-Standalone helper arrow functions (ES6) in 1 line.
+Standalone helper functions in 1 line.
 Useful for code injection, bookmarklets & debugging.
 
 ```plain
