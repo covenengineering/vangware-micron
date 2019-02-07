@@ -1,7 +1,7 @@
 {
   "name": "@vangware/micron",
   "description": "Standalone helper functions in 1 line",
-  "version": "8.0.0",
+  "version": "8.0.1",
   "author": {
     "name": "Vangware",
     "url": "https://vangware.com"
@@ -55,6 +55,7 @@
   ],
   "license": "MIT",
   "main": "./index.js",
+  "module": "./index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vangware/micron.git"

@@ -1,5 +1,10 @@
 # Changelog
 
+## 8.0.1
+
+- Added `module` field to `package.json`.
+- Fixed issue with build steps in Travis.
+
 ## 8.0.0
 
 - Updated structure yet again to pure JS (Typing with JSDocs).

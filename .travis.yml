@@ -1,7 +1,7 @@
 sudo: false
 language: node_js
 node_js: 11.0
-before_install: npm i -g pnpm
+before_install: npm i -g pnpm rimraf
 install:
   - npm i
   - rimraf ./node_modules
