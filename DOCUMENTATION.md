@@ -1,37 +1,38 @@
 ## Modules
 
 <dl>
-<dt><a href="#module_ael">ael</a> ⇒ <code>Array.&lt;HTMLElement&gt;</code></dt>
+<dt><a href="#module_ael">ael</a> ⇒ <code>Array.&lt;ElementType&gt;</code></dt>
 <dd><p>Listen to several events on an element or a group of elements.</p>
 </dd>
-<dt><a href="#module_atr">atr</a> ⇒ <code>Array.&lt;HTMLElement&gt;</code></dt>
+<dt><a href="#module_atr">atr</a> ⇒ <code>Array.&lt;ElementType&gt;</code></dt>
 <dd><p>Set several attributes of an element or a group of elements.</p>
 </dd>
-<dt><a href="#module_cks">cks</a> ⇒ <code>Object</code> | <code>Object.&lt;string, string&gt;</code></dt>
+<dt><a href="#module_cks">cks</a> ⇒ <code>Object.&lt;string, string&gt;</code></dt>
 <dd><p>Get the current document cookies in object form.</p>
 </dd>
-<dt><a href="#module_cne">cne</a> ⇒ <code>HTMLElement</code></dt>
+<dt><a href="#module_cne">cne</a> ⇒ <code>Array.&lt;HTMLElement&gt;</code></dt>
 <dd><p>Creates a new element.</p>
 </dd>
-<dt><a href="#module_cry">cry</a> ⇒ <code>function</code></dt>
-<dd><p>Curry the given function.</p>
+<dt><a href="#module_cry">cry</a> ⇒ <code>any</code></dt>
+<dd><p>Curry the given function.
+Loosely typed because typing curry is hell.</p>
 </dd>
-<dt><a href="#module_css">css</a> ⇒ <code>Array.&lt;HTMLElement&gt;</code></dt>
+<dt><a href="#module_css">css</a> ⇒ <code>Array.&lt;ElementType&gt;</code></dt>
 <dd><p>Set several styles of an element or a group of elements.</p>
 </dd>
-<dt><a href="#module_del">del</a> ⇒ <code>Array.&lt;HTMLElement&gt;</code></dt>
+<dt><a href="#module_del">del</a> ⇒ <code>Array.&lt;ElementType&gt;</code></dt>
 <dd><p>Remove an element or a group of elements from the DOM.</p>
 </dd>
-<dt><a href="#module_dom">dom</a> ⇒ <code>Document</code></dt>
+<dt><a href="#module_dom">dom</a> ⇒ <code>Array.&lt;Document&gt;</code></dt>
 <dd><p>Parse string into DOM.</p>
 </dd>
-<dt><a href="#module_get">get</a> ⇒ <code>Array.&lt;HTMLElement&gt;</code></dt>
+<dt><a href="#module_get">get</a> ⇒ <code>Array.&lt;ElementType&gt;</code></dt>
 <dd><p>Alias for querySelectorAll in an array.</p>
 </dd>
 <dt><a href="#module_mrx">mrx</a> ⇒ <code>string</code></dt>
 <dd><p>Takes a string and an object and makes a regex map replace</p>
 </dd>
-<dt><a href="#module_obj">obj</a> ⇒ <code>Object</code></dt>
+<dt><a href="#module_obj">obj</a> ⇒ <code>ObjectType</code></dt>
 <dd><p>Creates a clean object.</p>
 </dd>
 <dt><a href="#module_pad">pad</a> ⇒ <code>string</code></dt>
@@ -54,14 +55,15 @@ Credit: <a href="https://github.com/Jacob-Friesen/obscurejs/blob/master/2015/one
 
 <a name="module_ael"></a>
 
-## ael ⇒ <code>Array.&lt;HTMLElement&gt;</code>
+## ael ⇒ <code>Array.&lt;ElementType&gt;</code>
 Listen to several events on an element or a group of elements.
 
-**Returns**: <code>Array.&lt;HTMLElement&gt;</code> - DOM Element or Array of DOM Elements with event.  
+**Returns**: <code>Array.&lt;ElementType&gt;</code> - DOM Element or Array of DOM Elements with event.  
+**Template**: <code>HTMLElement</code> ElementType  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| E | <code>HTMLElement</code> \| <code>Array.&lt;HTMLElement&gt;</code> | DOM Element or Array of DOM Elements with event. |
+| E | <code>ElementType</code> \| <code>Array.&lt;ElementType&gt;</code> | DOM Element or Array of DOM Elements with event. |
 | V | <code>Object.&lt;string, EventListener&gt;</code> | List of events and callbacks in Object format. |
 
 **Example**  
@@ -76,15 +78,16 @@ ael(get("#id"), {
 ```
 <a name="module_atr"></a>
 
-## atr ⇒ <code>Array.&lt;HTMLElement&gt;</code>
+## atr ⇒ <code>Array.&lt;ElementType&gt;</code>
 Set several attributes of an element or a group of elements.
 
-**Returns**: <code>Array.&lt;HTMLElement&gt;</code> - DOM Element or Array of DOM Elements with new attributes.  
+**Returns**: <code>Array.&lt;ElementType&gt;</code> - DOM Element or Array of DOM Elements with new attributes.  
+**Template**: <code>HTMLElement</code> ElementType  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| E | <code>HTMLElement</code> \| <code>Array.&lt;HTMLElement&gt;</code> | DOM Element or Array of DOM Elements with event. |
-| A | <code>Object.&lt;string, any&gt;</code> | List of attributes in Object format. |
+| E | <code>ElementType</code> \| <code>Array.&lt;ElementType&gt;</code> | DOM Element or Array of DOM Elements with event. |
+| A | <code>Object.&lt;string, string&gt;</code> | List of attributes in Object format. |
 
 **Example**  
 ```js
@@ -96,10 +99,10 @@ atr(get("#id"), {
 ```
 <a name="module_cks"></a>
 
-## cks ⇒ <code>Object</code> \| <code>Object.&lt;string, string&gt;</code>
+## cks ⇒ <code>Object.&lt;string, string&gt;</code>
 Get the current document cookies in object form.
 
-**Returns**: <code>Object</code> \| <code>Object.&lt;string, string&gt;</code> - The document cookies object.  
+**Returns**: <code>Object.&lt;string, string&gt;</code> - The document cookies object.  
 **Example**  
 ```js
 cks(); // If document.cookie is "a=1; b=2", returns { a: 1, b: 2 }
@@ -107,22 +110,23 @@ cks(); // If document.cookie is empty, returns {}
 ```
 <a name="module_cne"></a>
 
-## cne ⇒ <code>HTMLElement</code>
+## cne ⇒ <code>Array.&lt;HTMLElement&gt;</code>
 Creates a new element.
 
-**Returns**: <code>HTMLElement</code> - New element with properties set.  
+**Returns**: <code>Array.&lt;HTMLElement&gt;</code> - New element with properties set.  
+**Template**: <code>keyof HTMLElementTagNameMap</code> TagType  
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| t | <code>string</code> |  | Element tag. |
-| [P] | <code>Object.&lt;string, any&gt;</code> | <code>{}</code> | Element properties. |
+| t | <code>TagType</code> \| <code>string</code> |  | Element tag. |
+| [P] | <code>Object.&lt;string, string&gt;</code> | <code>{}</code> | Element properties. |
 
 **Example**  
 ```js
 cne("div"); // Returns <div></div>
 cne("div", {
-  width: 100,
-  height: 100,
+  width: "100",
+  height: "100",
   style: {
     backgroundColor: "#000"
   }
@@ -130,10 +134,11 @@ cne("div", {
 ```
 <a name="module_cry"></a>
 
-## cry ⇒ <code>function</code>
+## cry ⇒ <code>any</code>
 Curry the given function.
+Loosely typed because typing curry is hell.
 
-**Returns**: <code>function</code> - Curried function.  
+**Returns**: <code>any</code> - Curried function or function output.  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -151,15 +156,16 @@ addTwo(3); // Returns 5
 ```
 <a name="module_css"></a>
 
-## css ⇒ <code>Array.&lt;HTMLElement&gt;</code>
+## css ⇒ <code>Array.&lt;ElementType&gt;</code>
 Set several styles of an element or a group of elements.
 
-**Returns**: <code>Array.&lt;HTMLElement&gt;</code> - DOM Element or Array of DOM Elements with new styles.  
+**Returns**: <code>Array.&lt;ElementType&gt;</code> - DOM Element or Array of DOM Elements with new styles.  
+**Template**: <code>HTMLElement</code> ElementType  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| E | <code>HTMLElement</code> \| <code>Array.&lt;HTMLElement&gt;</code> | DOM Element or Array of DOM Elements to set styles. |
-| S | <code>Object.&lt;string, any&gt;</code> | List of styles in Object format. |
+| E | <code>ElementType</code> \| <code>Array.&lt;ElementType&gt;</code> | DOM Element or Array of DOM Elements to set styles. |
+| S | <code>CSSStyleDeclaration</code> | List of styles in Object format. |
 
 **Example**  
 ```js
@@ -171,14 +177,15 @@ css(get("#id"), {
 ```
 <a name="module_del"></a>
 
-## del ⇒ <code>Array.&lt;HTMLElement&gt;</code>
+## del ⇒ <code>Array.&lt;ElementType&gt;</code>
 Remove an element or a group of elements from the DOM.
 
-**Returns**: <code>Array.&lt;HTMLElement&gt;</code> - DOM Element or Array of DOM Elements removed from DOM.  
+**Returns**: <code>Array.&lt;ElementType&gt;</code> - DOM Element or Array of DOM Elements removed from DOM.  
+**Template**: <code>HTMLElement</code> ElementType  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| E | <code>HTMLElement</code> \| <code>Array.&lt;HTMLElement&gt;</code> | DOM Element or Array of DOM Elements to remove from DOM. |
+| E | <code>ElementType</code> \| <code>Array.&lt;ElementType&gt;</code> | DOM Element or Array of DOM Elements to remove from DOM. |
 
 **Example**  
 ```js
@@ -187,10 +194,10 @@ del(get("#id")); // Element gets removed from the DOM and returned
 ```
 <a name="module_dom"></a>
 
-## dom ⇒ <code>Document</code>
+## dom ⇒ <code>Array.&lt;Document&gt;</code>
 Parse string into DOM.
 
-**Returns**: <code>Document</code> - Parsed DOM.  
+**Returns**: <code>Array.&lt;Document&gt;</code> - Parsed DOM.  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -202,15 +209,16 @@ dom("<a>Hello world</a>"); // Returns document object with that link on the body
 ```
 <a name="module_get"></a>
 
-## get ⇒ <code>Array.&lt;HTMLElement&gt;</code>
+## get ⇒ <code>Array.&lt;ElementType&gt;</code>
 Alias for querySelectorAll in an array.
 
-**Returns**: <code>Array.&lt;HTMLElement&gt;</code> - Array of elements.  
+**Returns**: <code>Array.&lt;ElementType&gt;</code> - Array of elements.  
+**Template**: <code>HTMLElement</code> ElementType  
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | q | <code>string</code> |  | CSS Query. |
-| [e] | <code>HTMLElement</code> \| <code>Document</code> | <code>document</code> | Base element. |
+| [e] | <code>ElementType</code> \| <code>Document</code> | <code>document</code> | Base element. |
 
 **Example**  
 ```js
@@ -227,7 +235,7 @@ Takes a string and an object and makes a regex map replace
 | Param | Type | Description |
 | --- | --- | --- |
 | s | <code>string</code> | String. |
-| m | <code>Object.&lt;string, string&gt;</code> | Map with format { "target": "replacing string" }. |
+| m | <code>Object.&lt;string, string&gt;</code> | Map with format `{ "target": "replacing string" }`. |
 
 **Example**  
 ```js
@@ -235,14 +243,15 @@ mrx("abc", {"a":1,"b":2,"c":3}); // Returns "123"
 ```
 <a name="module_obj"></a>
 
-## obj ⇒ <code>Object</code>
+## obj ⇒ <code>ObjectType</code>
 Creates a clean object.
 
-**Returns**: <code>Object</code> - New clean object.  
+**Returns**: <code>ObjectType</code> - New clean object.  
+**Template**: ObjectType  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| ...o | <code>Object</code> | Objects to use. |
+| o | <code>ObjectType</code> | Objects to use. |
 
 **Example**  
 ```js
@@ -273,9 +282,9 @@ Credit: https://github.com/Jacob-Friesen/obscurejs/blob/master/2015/oneLineRando
 
 **Returns**: <code>string</code> - A random string.  
 
-| Param | Type | Description |
-| --- | --- | --- |
-| l | <code>number</code> | Length of the random string. |
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| [l] | <code>number</code> | <code>10</code> | Length of the random string. |
 
 **Example**  
 ```js
@@ -289,9 +298,9 @@ Timestamp string hash generator (up to 8 characters).
 
 **Returns**: <code>string</code> - A timestamp hash.  
 
-| Param | Type | Description |
-| --- | --- | --- |
-| l | <code>number</code> | Length of the random string (8 max). |
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| [l] | <code>number</code> | <code>8</code> | Length of the random string (8 max). |
 
 **Example**  
 ```js
@@ -304,10 +313,11 @@ tsh(4); // Timestamp hash of 4 characters, like: "ytbz".
 Parse an object into a simple string in URL format for XHR.
 
 **Returns**: <code>string</code> - URL formated string.  
+**Template**: ObjectType  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| o | <code>Object</code> | List of input data for ajax in Object format. |
+| o | <code>ObjectType</code> | List of input data for ajax in Object format. |
 
 **Example**  
 ```js
@@ -324,7 +334,7 @@ Alias for new XMLHttpRequest, with GET method by default.
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | u | <code>string</code> |  | URL. |
-| [m] | <code>string</code> | <code>&quot;GET&quot;</code> | Method. |
+| [m] | <code>string</code> | <code>&quot;\&quot;GET\&quot;&quot;</code> | Method. |
 
 **Example**  
 ```js

@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "alwaysStrict": true,
+    "checkJs": true,
+    "strict": true,
+    "target": "esnext"
+  },
+  "exclude": [
+    "./node_modules/"
+  ]
+}

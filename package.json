@@ -1,24 +1,41 @@
 {
   "name": "@vangware/micron",
-  "version": "7.1.3",
-  "description": "Standalone helper arrow functions (ES6) in 1 line",
-  "source": "./src",
-  "main": "./dist",
-  "types": "./dist",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vangware/micron.git"
+  "description": "Standalone helper functions in 1 line",
+  "version": "8.0.0",
+  "author": {
+    "name": "Vangware",
+    "url": "https://vangware.com"
   },
-  "scripts": {
-    "precommit": "tsc && jsdoc2md dist/*.js > DOCUMENTATION.md",
-    "clean": "rimraf ./dist",
-    "test": "echo 'No test yet, sorry'"
+  "bugs": {
+    "url": "https://github.com/vangware/micron/issues"
   },
+  "contributors": [
+    {
+      "email": "hello@lukeshiru.me",
+      "name": "Lucas Ciruzzi",
+      "url": "https://lukeshiru.me"
+    },
+    {
+      "email": "jacob@jacobfriesen.com",
+      "name": "Jacob Friesen",
+      "url": "http://jacobfriesen.com"
+    }
+  ],
+  "devDependencies": {
+    "husky": "^1.3.1",
+    "jsdoc-to-markdown": "^4.0.1"
+  },
+  "engines": {
+    "node": "11.x.x",
+    "npm": "6.x.x"
+  },
+  "homepage": "https://github.com/vangware/micron#readme",
   "keywords": [
+    "DOM",
+    "XMLHTTPRequest",
     "ajax",
     "clean",
     "cookies",
-    "DOM",
     "dom",
     "es2015",
     "es6",
@@ -34,38 +51,16 @@
     "regex",
     "simple",
     "standalone",
-    "typescript",
-    "XMLHTTPRequest"
-  ],
-  "author": {
-    "name": "Vangware",
-    "url": "https://vangware.com"
-  },
-  "contributors": [
-    {
-      "email": "hello@lukeshiru.me",
-      "name": "Lucas Ciruzzi",
-      "url": "https://lukeshiru.me"
-    },
-    {
-      "email": "jacob@jacobfriesen.com",
-      "name": "Jacob Friesen",
-      "url": "http://jacobfriesen.com"
-    }
+    "typescript"
   ],
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/vangware/micron/issues"
+  "main": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vangware/micron.git"
   },
-  "homepage": "https://github.com/vangware/micron#readme",
-  "devDependencies": {
-    "husky": "^0.14.3",
-    "jsdoc-to-markdown": "^4.0.1",
-    "rimraf": "^2.6.2",
-    "typescript": "^2.9.2"
-  },
-  "engines": {
-    "node": "10.x.x",
-    "npm": "6.x.x"
+  "scripts": {
+    "precommit": "jsdoc2md lib/*.js > DOCUMENTATION.md",
+    "test": "echo 'No test YET (Will add in the future). Sorry.'"
   }
 }
