@@ -58,8 +58,7 @@ Credit: <a href="https://github.com/Jacob-Friesen/obscurejs/blob/master/2015/one
 ## ael ⇒ <code>Array.&lt;ElementType&gt;</code>
 Listen to several events on an element or a group of elements.
 
-**Returns**: <code>Array.&lt;ElementType&gt;</code> - DOM Element or Array of DOM Elements with event.  
-**Template**: <code>HTMLElement</code> ElementType  
+**Returns**: <code>Array.&lt;ElementType&gt;</code> - DOM Element or Array of DOM Elements with new attributes.  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -82,7 +81,6 @@ ael(get("#id"), {
 Set several attributes of an element or a group of elements.
 
 **Returns**: <code>Array.&lt;ElementType&gt;</code> - DOM Element or Array of DOM Elements with new attributes.  
-**Template**: <code>HTMLElement</code> ElementType  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -114,7 +112,6 @@ cks(); // If document.cookie is empty, returns {}
 Creates a new element.
 
 **Returns**: <code>Array.&lt;HTMLElement&gt;</code> - New element with properties set.  
-**Template**: <code>keyof HTMLElementTagNameMap</code> TagType  
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
@@ -160,7 +157,6 @@ addTwo(3); // Returns 5
 Set several styles of an element or a group of elements.
 
 **Returns**: <code>Array.&lt;ElementType&gt;</code> - DOM Element or Array of DOM Elements with new styles.  
-**Template**: <code>HTMLElement</code> ElementType  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -181,7 +177,6 @@ css(get("#id"), {
 Remove an element or a group of elements from the DOM.
 
 **Returns**: <code>Array.&lt;ElementType&gt;</code> - DOM Element or Array of DOM Elements removed from DOM.  
-**Template**: <code>HTMLElement</code> ElementType  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -213,7 +208,6 @@ dom("<a>Hello world</a>"); // Returns document object with that link on the body
 Alias for querySelectorAll in an array.
 
 **Returns**: <code>Array.&lt;ElementType&gt;</code> - Array of elements.  
-**Template**: <code>HTMLElement</code> ElementType  
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
@@ -247,7 +241,6 @@ mrx("abc", {"a":1,"b":2,"c":3}); // Returns "123"
 Creates a clean object.
 
 **Returns**: <code>ObjectType</code> - New clean object.  
-**Template**: ObjectType  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -313,7 +306,6 @@ tsh(4); // Timestamp hash of 4 characters, like: "ytbz".
 Parse an object into a simple string in URL format for XHR.
 
 **Returns**: <code>string</code> - URL formated string.  
-**Template**: ObjectType  
 
 | Param | Type | Description |
 | --- | --- | --- |
