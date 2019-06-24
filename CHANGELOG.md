@@ -1,5 +1,9 @@
 # Changelog
 
+## 8.0.2
+
+- Update dependencies.
+
 ## 8.0.1
 
 - Added `module` field to `package.json`.
