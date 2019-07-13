@@ -1,7 +1,7 @@
 {
   "name": "@vangware/micron",
   "description": "Standalone helper functions in 1 line",
-  "version": "8.0.2",
+  "version": "8.0.3",
   "author": {
     "name": "Vangware",
     "url": "https://vangware.com"
@@ -22,8 +22,8 @@
     }
   ],
   "devDependencies": {
-    "husky": "2",
-    "jsdoc-to-markdown": "5"
+    "husky": "^3.0.0",
+    "jsdoc-to-markdown": "^5.0.0"
   },
   "engines": {
     "node": "12.x.x",
