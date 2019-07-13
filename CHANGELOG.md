@@ -1,5 +1,9 @@
 # Changelog
 
+## 8.0.4
+
+- Fix build by removing engines.
+
 ## 8.0.3
 
 - Updated dependencies.
