@@ -1,7 +1,7 @@
 {
   "name": "@vangware/micron",
   "description": "Standalone helper functions in 1 line",
-  "version": "8.0.4",
+  "version": "8.0.5",
   "author": {
     "name": "Vangware",
     "url": "https://vangware.com"
@@ -22,8 +22,9 @@
     }
   ],
   "devDependencies": {
-    "husky": "^3.0.0",
-    "jsdoc-to-markdown": "^5.0.0"
+    "@vangware/vangstyle": "^1.4.4",
+    "husky": "3.0.9",
+    "jsdoc-to-markdown": "5.0.2"
   },
   "homepage": "https://github.com/vangware/micron#readme",
   "husky": {
@@ -62,6 +63,6 @@
     "url": "git+https://github.com/vangware/micron.git"
   },
   "scripts": {
-    "test": "echo 'No test YET (Will add in the future). Sorry.'"
+    "test": "echo 'No test. Sorry.'"
   }
 }

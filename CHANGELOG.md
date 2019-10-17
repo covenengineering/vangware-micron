@@ -1,5 +1,9 @@
 # Changelog
 
+## 8.0.5
+
+- Dependency upgrade.
+
 ## 8.0.4
 
 - Fix build by removing engines.

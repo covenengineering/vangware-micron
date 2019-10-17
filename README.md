@@ -1,4 +1,4 @@
-# micron
+# @vangware/micron
 
 [![\[Micron logo\]](https://cdn.rawgit.com/vangware/micron/master/logo.svg)](https://vangware.com)
 
@@ -28,3 +28,5 @@ xhr: Alias for new XMLHttpRequest, with GET method by default.
 ```
 
 Check [the documentation](DOCUMENTATION.md) for more details. You can also check [the changelog](CHANGELOG.md).
+
+If you are looking for a more robust solution, take a look at [@vangware/micro](https://github.com/vangware/micro).
