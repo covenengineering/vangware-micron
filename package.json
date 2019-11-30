@@ -1,7 +1,7 @@
 {
   "name": "@vangware/micron",
   "description": "Standalone helper functions in 1 line",
-  "version": "8.0.5",
+  "version": "8.1.0",
   "author": {
     "name": "Vangware",
     "url": "https://vangware.com"
@@ -22,9 +22,12 @@
     }
   ],
   "devDependencies": {
-    "@vangware/vangstyle": "^1.4.4",
-    "husky": "3.0.9",
-    "jsdoc-to-markdown": "5.0.2"
+    "@vangware/vangstyle": "^4.0.1",
+    "husky": "^3.1.0",
+    "jsdoc-to-markdown": "^5.0.3",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.0",
+    "typescript": "^3.7.2"
   },
   "homepage": "https://github.com/vangware/micron#readme",
   "husky": {
@@ -63,6 +66,16 @@
     "url": "git+https://github.com/vangware/micron.git"
   },
   "scripts": {
-    "test": "echo 'No test. Sorry.'"
-  }
+    "clean": "rimraf ./{index,lib/*}.d.ts",
+    "prepublishOnly": "run-s clean types",
+    "test": "echo 'No test. Sorry.'",
+    "types": "tsc"
+  },
+  "types": "./index.d.ts",
+  "files": [
+    "index.d.ts",
+    "index.js",
+    "lib/*.d.ts",
+    "lib/*.js"
+  ]
 }

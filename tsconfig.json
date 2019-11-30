@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "alwaysStrict": true,
+    "checkJs": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "strict": true,
+    "target": "ESNext"
+  },
+  "exclude": [
+    "./node_modules/",
+    "./index.d.ts",
+    "./lib/*.d.ts"
+  ],
+  "include": [
+    "./index.js",
+    "./lib/*.js"
+  ]
+}

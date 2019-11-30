@@ -1,5 +1,11 @@
 # Changelog
 
+## 8.1.0
+
+- Dependency upgrade.
+- Auto-generated types.
+- Removed lock files.
+
 ## 8.0.5
 
 - Dependency upgrade.
