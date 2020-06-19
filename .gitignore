@@ -153,10 +153,6 @@ $RECYCLE.BIN/
 
 # End of https://www.gitignore.io/api/node,linux,macos,windows
 
-# TypeScript files (generated on prepublishOnly).
-lib/*.d.ts
-index.d.ts
-
 # Lock files
 package-lock.json
 pnpm-lock.yaml

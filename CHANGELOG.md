@@ -1,5 +1,12 @@
 # Changelog
 
+## 9.0.0
+
+- All functions are curried now.
+- Removed `cry` (functions already are curried).
+- Removed `pad` (use `String.prototype.padStart`).
+- Removed `rnd` (use more reliable `tsh`).
+
 ## 8.1.0
 
 - Dependency upgrade.
