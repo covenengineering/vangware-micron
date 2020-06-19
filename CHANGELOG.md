@@ -1,5 +1,9 @@
 # Changelog
 
+## 9.0.1
+
+- Updated `README.md`.
+
 ## 9.0.0
 
 - All functions are curried now.
