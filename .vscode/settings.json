@@ -1,5 +1,1 @@
-{
-	"cSpell.words": [
-		"vangware"
-	]
-}
+{ "eslint.enable": false, "prettier.enable": false }

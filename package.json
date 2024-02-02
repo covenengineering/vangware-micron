@@ -1,82 +1,73 @@
 {
-  "name": "@vangware/micron",
-  "description": "Standalone helper functions in 1 line",
-  "version": "9.0.1",
-  "author": {
-    "name": "Vangware",
-    "url": "https://vangware.com"
-  },
-  "bugs": {
-    "url": "https://github.com/vangware/micron/issues"
-  },
-  "contributors": [
-    {
-      "email": "hello@lukeshiru.me",
-      "name": "Lucas Ciruzzi",
-      "url": "https://lukeshiru.me"
-    },
-    {
-      "email": "jacob@jacobfriesen.com",
-      "name": "Jacob Friesen",
-      "url": "http://jacobfriesen.com"
-    }
-  ],
-  "devDependencies": {
-    "@vangware/vangstyle": "^4.4.0",
-    "husky": "^4.2.5",
-    "jsdoc-to-markdown": "^6.0.1",
-    "npm-run-all": "^4.1.5",
-    "rimraf": "^3.0.2",
-    "typescript": "^3.9.5"
-  },
-  "files": [
-    "index.d.ts",
-    "index.js",
-    "lib/*.d.ts",
-    "lib/*.js"
-  ],
-  "homepage": "https://github.com/vangware/micron#readme",
-  "husky": {
-    "hooks": {
-      "pre-commit": "run-s docs"
-    }
-  },
-  "keywords": [
-    "DOM",
-    "XMLHTTPRequest",
-    "ajax",
-    "clean",
-    "cookies",
-    "dom",
-    "es2015",
-    "es6",
-    "functions",
-    "hash",
-    "helpers",
-    "lightweight",
-    "minimal",
-    "minimalistic",
-    "object",
-    "padding",
-    "random",
-    "regex",
-    "simple",
-    "standalone",
-    "typescript"
-  ],
-  "license": "MIT",
-  "main": "./index.js",
-  "module": "./index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vangware/micron.git"
-  },
-  "scripts": {
-    "clean": "rimraf ./{index,lib/*}.d.ts",
-    "docs": "jsdoc2md lib/*.js > DOCUMENTATION.md",
-    "prepublishOnly": "run-s clean types",
-    "test": "echo 'No test. Sorry.'",
-    "types": "tsc"
-  },
-  "types": "./index.d.ts"
+	"name": "@vangware/micron",
+	"description": "Standalone helper functions in 1 line",
+	"version": "9.0.1",
+	"author": {
+		"name": "Vangware",
+		"url": "https://vangware.com"
+	},
+	"bugs": {
+		"url": "https://github.com/vangware/micron/issues"
+	},
+	"contributors": [
+		{
+			"email": "hello@lukeshiru.me",
+			"name": "Lucas Ciruzzi",
+			"url": "https://lukeshiru.me"
+		},
+		{
+			"email": "jacob@jacobfriesen.com",
+			"name": "Jacob Friesen",
+			"url": "http://jacobfriesen.com"
+		}
+	],
+	"devDependencies": {
+		"@lou.codes/configs": "^4.1.2",
+		"eslint": "^8.56.0",
+		"jsdoc-to-markdown": "^8.0.1",
+		"npm-run-all": "^4.1.5",
+		"prettier": "^3.2.4",
+		"rimraf": "^5.0.5",
+		"typescript": "^5.3.3"
+	},
+	"files": [
+		"lib/*.js"
+	],
+	"homepage": "https://github.com/vangware/micron#readme",
+	"keywords": [
+		"DOM",
+		"XMLHTTPRequest",
+		"ajax",
+		"clean",
+		"cookies",
+		"dom",
+		"es2015",
+		"es6",
+		"functions",
+		"hash",
+		"helpers",
+		"lightweight",
+		"minimal",
+		"minimalistic",
+		"object",
+		"padding",
+		"random",
+		"regex",
+		"simple",
+		"standalone",
+		"typescript"
+	],
+	"license": "MIT",
+	"exports": {
+		".": "./lib/index.js",
+		"./*": "./lib/*"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/vangware/micron.git"
+	},
+	"scripts": {
+		"document": "jsdoc2md lib/*.js > DOCUMENTATION.md && prettier DOCUMENTATION.md --write"
+	},
+	"type": "module"
 }

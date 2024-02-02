@@ -1,141 +1,149 @@
 # Changelog
 
+## 10.0.0
+
+-   Modernized a little.
+
 ## 9.0.1
 
-- Updated `README.md`.
+-   Updated `README.md`.
 
 ## 9.0.0
 
-- All functions are curried now.
-- Removed `cry` (functions already are curried).
-- Removed `pad` (use `String.prototype.padStart`).
-- Removed `rnd` (use more reliable `tsh`).
+-   All functions are curried now.
+-   Removed `cry` (functions already are curried).
+-   Removed `pad` (use `String.prototype.padStart`).
+-   Removed `rnd` (use more reliable `tsh`).
 
 ## 8.1.0
 
-- Dependency upgrade.
-- Auto-generated types.
-- Removed lock files.
+-   Dependency upgrade.
+-   Auto-generated types.
+-   Removed lock files.
 
 ## 8.0.5
 
-- Dependency upgrade.
+-   Dependency upgrade.
 
 ## 8.0.4
 
-- Fix build by removing engines.
+-   Fix build by removing engines.
 
 ## 8.0.3
 
-- Updated dependencies.
+-   Updated dependencies.
 
 ## 8.0.2
 
-- Update dependencies.
+-   Update dependencies.
 
 ## 8.0.1
 
-- Added `module` field to `package.json`.
-- Fixed issue with build steps in Travis.
+-   Added `module` field to `package.json`.
+-   Fixed issue with build steps in Travis.
 
 ## 8.0.0
 
-- Updated structure yet again to pure JS (Typing with JSDocs).
-- Updated dependencies.
-- Updated node version.
-- `package.json` fixed with `fixpack`.
-- Changed `cne` and `dom` to return arrays for consistency (everything can be mapped, reduced, etc.).
-- `micron` now is compatible with `ESM`, so can be loaded directly in the browser.
+-   Updated structure yet again to pure JS (Typing with JSDocs).
+-   Updated dependencies.
+-   Updated node version.
+-   `package.json` fixed with `fixpack`.
+-   Changed `cne` and `dom` to return arrays for consistency (everything can be
+    mapped, reduced, etc.).
+-   `micron` now is compatible with `ESM`, so can be loaded directly in the
+    browser.
 
 ## 7.1.3
 
-- Updated dependencies.
+-   Updated dependencies.
 
 ## 7.1.2
 
-- Updated dependencies.
+-   Updated dependencies.
 
 ## 7.1.1
 
-- Travis script patched.
+-   Travis script patched.
 
 ## 7.1.0
 
-- Updated dependencies.
-- Updated pad function.
+-   Updated dependencies.
+-   Updated pad function.
 
 ## 7.0.5
 
-- Fixes for Travis.
+-   Fixes for Travis.
 
 ## 7.0.4
 
-- Updated dependencies.
-- Added `yarn` and `npm` lock files.
+-   Updated dependencies.
+-   Added `yarn` and `npm` lock files.
 
 ## 7.0.3
 
-- Updated dependencies.
+-   Updated dependencies.
 
 ## 7.0.2
 
-- Updated dependencies.
+-   Updated dependencies.
 
 ## 7.0.1
 
-- Updated assets to point to new NPM url.
+-   Updated assets to point to new NPM url.
 
 ## 7.0.0
 
-- More breaking changes!
-- Yet another big change in the structure.
-- Moved to scope @vangware.
-- Deprecated old micron.js.
+-   More breaking changes!
+-   Yet another big change in the structure.
+-   Moved to scope @vangware.
+-   Deprecated old micron.js.
 
 ## 6.0.0
 
-- Better typing support.
-- Better documentation.
-- Removed `forEach` from `obj` output clean object.
+-   Better typing support.
+-   Better documentation.
+-   Removed `forEach` from `obj` output clean object.
 
 ## 5.0.2
 
-- Better documentation.
+-   Better documentation.
 
 ## 5.0.1
 
-- Oups! Fixed missing reference to `cne` on `micron.ts`.
+-   Oups! Fixed missing reference to `cne` on `micron.ts`.
 
 ## 5.0.0
 
-- Added `cne` (Creates a new element).
-- Updated `tsh` to be actually useful when using less than 8 characters.
-- Added examples for `rnd`, `tsh` and `cks`.
-- Updated documentation accordingly.
+-   Added `cne` (Creates a new element).
+-   Updated `tsh` to be actually useful when using less than 8 characters.
+-   Added examples for `rnd`, `tsh` and `cks`.
+-   Updated documentation accordingly.
 
 ## 4.1.2
 
-- Updated dependencies.
-- Added badge for npm version on `README.md`.
-- Added contributors field to `package.json`.
-- Added credit for [@Jacob-Friesen](https://github.com/Jacob-Friesen) in `contributors`.
+-   Updated dependencies.
+-   Added badge for npm version on `README.md`.
+-   Added contributors field to `package.json`.
+-   Added credit for [@Jacob-Friesen](https://github.com/Jacob-Friesen) in
+    `contributors`.
 
 ## 4.1.1
 
-- Updated dependencies.
-- Updated `README.md`.
+-   Updated dependencies.
+-   Updated `README.md`.
 
 ## 4.1.0
 
-- Added `cry`.
-- Updated `README.md`.
+-   Added `cry`.
+-   Updated `README.md`.
 
 ## 4.0.1
 
-- Updated dependencies.
+-   Updated dependencies.
 
 ## 4.0.0
 
-- Added `CHANGELOG.md`.
-- Functions separated into files.
-- Added `.vscode` settings to hide the clutter and only see the beautiful TypeScript.
+-   Added `CHANGELOG.md`.
+-   Functions separated into files.
+-   Added `.vscode` settings to hide the clutter and only see the beautiful
+    TypeScript.

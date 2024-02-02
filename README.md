@@ -1,29 +1,26 @@
-# @vangware/micron
+> Deprecated: This is an archive of sorts. Go to [lou.codes](https://lou.codes)
+> to see what I'm doing nowadays.
 
-[![\[Micron logo\]](https://cdn.rawgit.com/vangware/micron/master/logo.svg)](https://vangware.com)
+---
 
-[![\[NPM Version\]](https://img.shields.io/npm/v/@vangware/micron.svg?style=flat-square)](https://npm.im/@vangware/micron)
-[![\[Build Status\]](https://img.shields.io/travis/vangware/micron.svg?style=flat-square)](https://travis-ci.org/vangware/micron)
+![@vangware/micron](./logo.svg)
 
-Standalone helper functions in 1 line.
-Useful for code injection, bookmarklets & debugging.
+Standalone helper functions in 1 line I wrote a few years ago playing with
+manual minification.
 
-```plain
-ael: Listen to several events on an element or a group of elements.
-atr: Set several attributes of an element or a group of elements.
-cks: Get the current document cookies in object form.
-cne: Creates a new element.
-css: Set several styles of an element or a group of elements.
-del: Remove an element or a group of elements from the DOM.
-dom: Parse string into DOM.
-get: Alias for querySelectorAll in an array.
-mrx: Takes a string and an object and makes a regex map replace.
-obj: Creates a clean object.
-tsh: Timestamp string hash generator (up to 8 characters).
-url: Parse an object into a simple string in URL format for XHR.
-xhr: Alias for new XMLHttpRequest, with GET method by default.
-```
+-   `ael`: Listen to several events on an element or a group of elements.
+-   `atr`: Set several attributes of an element or a group of elements.
+-   `cks`: Get the current document cookies in object form.
+-   `cne`: Creates a new element.
+-   `css`: Set several styles of an element or a group of elements.
+-   `del`: Remove an element or a group of elements from the DOM.
+-   `dom`: Parse string into DOM.
+-   `get`: Alias for querySelectorAll in an array.
+-   `mrx`: Takes a string and an object and makes a regex map replace.
+-   `obj`: Creates a clean object.
+-   `tsh`: Timestamp string hash generator (up to 8 characters).
+-   `url`: Parse an object into a simple string in URL format for XHR.
+-   `xhr`: Alias for new XMLHttpRequest, with GET method by default.
 
-Check [the documentation](DOCUMENTATION.md) for more details. You can also check [the changelog](CHANGELOG.md).
-
-If you are looking for a more robust solution, take a look at [@vangware/micro](https://github.com/vangware/micro).
+Check [the documentation](DOCUMENTATION.md) for more details. You can also check
+[the changelog](CHANGELOG.md).
