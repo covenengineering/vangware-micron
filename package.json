@@ -1,19 +1,20 @@
 {
 	"name": "@vangware/micron",
 	"description": "Standalone helper functions in 1 line",
-	"version": "9.0.1",
+	"version": "10.0.0",
 	"author": {
-		"name": "Vangware",
-		"url": "https://vangware.com"
+		"email": "contact@lou.codes",
+		"name": "Lou Cyx",
+		"url": "https://lou.codes"
 	},
 	"bugs": {
 		"url": "https://github.com/vangware/micron/issues"
 	},
 	"contributors": [
 		{
-			"email": "hello@lukeshiru.me",
-			"name": "Lucas Ciruzzi",
-			"url": "https://lukeshiru.me"
+			"email": "contact@lou.codes",
+			"name": "Lou Cyx",
+			"url": "https://lou.codes"
 		},
 		{
 			"email": "jacob@jacobfriesen.com",
