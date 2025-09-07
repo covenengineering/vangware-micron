@@ -1,5 +1,4 @@
-> Deprecated: This is an archive of sorts. Go to [lou.codes](https://lou.codes)
-> to see what I'm doing nowadays.
+> **Deprecated:** Go to [coven.engineering](https://coven.engineering) to see we are doing nowadays.
 
 ---
 
